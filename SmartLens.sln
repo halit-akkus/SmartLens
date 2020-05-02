@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.Core", "SmartLens.Core\SmartLens.Core.csproj", "{7863680B-27CB-4E06-A447-651FF93654DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.Business", "SmartLens.Business\SmartLens.Business.csproj", "{C58EFF74-A146-40FA-B691-BBFE5850D05B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.Entities", "SmartLens.Entities\SmartLens.Entities.csproj", "{F2818CFC-523A-45FB-843E-DDEADA3C5998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.DataAccess", "SmartLens.DataAccess\SmartLens.DataAccess.csproj", "{839426E5-1DC8-4F6D-A64C-D7EF7788D968}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SmartLens.UICoreMVC", "SmartLens.UICoreMVC\SmartLens.UICoreMVC.fsproj", "{735AB071-2D56-43B5-BFCE-DFC01A6567E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.Transmission", "SmartLens.Transmission\SmartLens.Transmission.csproj", "{D21C28F3-2929-412E-AFB2-02EF97D7AE77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7863680B-27CB-4E06-A447-651FF93654DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7863680B-27CB-4E06-A447-651FF93654DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7863680B-27CB-4E06-A447-651FF93654DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7863680B-27CB-4E06-A447-651FF93654DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58EFF74-A146-40FA-B691-BBFE5850D05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58EFF74-A146-40FA-B691-BBFE5850D05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58EFF74-A146-40FA-B691-BBFE5850D05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58EFF74-A146-40FA-B691-BBFE5850D05B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2818CFC-523A-45FB-843E-DDEADA3C5998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2818CFC-523A-45FB-843E-DDEADA3C5998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2818CFC-523A-45FB-843E-DDEADA3C5998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2818CFC-523A-45FB-843E-DDEADA3C5998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839426E5-1DC8-4F6D-A64C-D7EF7788D968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839426E5-1DC8-4F6D-A64C-D7EF7788D968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839426E5-1DC8-4F6D-A64C-D7EF7788D968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839426E5-1DC8-4F6D-A64C-D7EF7788D968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735AB071-2D56-43B5-BFCE-DFC01A6567E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735AB071-2D56-43B5-BFCE-DFC01A6567E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735AB071-2D56-43B5-BFCE-DFC01A6567E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735AB071-2D56-43B5-BFCE-DFC01A6567E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21C28F3-2929-412E-AFB2-02EF97D7AE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21C28F3-2929-412E-AFB2-02EF97D7AE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21C28F3-2929-412E-AFB2-02EF97D7AE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21C28F3-2929-412E-AFB2-02EF97D7AE77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6D617B7-3665-4BCB-8B03-E83DC2735444}
+	EndGlobalSection
+EndGlobal

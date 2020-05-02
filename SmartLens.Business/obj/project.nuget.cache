@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zSboI8txBif69J0iy8c06Dy0ZFmA2UrC/kggbC0nZY7rwRbIQmPFXZTNNEcU48DsVGahhMAeVMaXzGU+RzQwdQ==",
+  "success": true,
+  "projectFilePath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\halit\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\halit\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

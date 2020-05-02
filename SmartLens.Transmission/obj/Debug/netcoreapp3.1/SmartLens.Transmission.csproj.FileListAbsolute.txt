@@ -1,0 +1,12 @@
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.exe
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.deps.json
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.runtimeconfig.json
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.runtimeconfig.dev.json
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.dll
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.pdb
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.csproj.CoreCompileInputs.cache
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.AssemblyInfoInputs.cache
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.AssemblyInfo.cs
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.dll
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.pdb
+E:\GIT\SmartLens\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.genruntimeconfig.cache
