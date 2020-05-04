@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Transmission\\SmartLens.Transmission.csproj",
+      "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens.Transmission\\SmartLens.Transmission.csproj",
       "projectName": "SmartLens.Transmission",
-      "projectPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Transmission\\SmartLens.Transmission.csproj",
+      "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Transmission\\SmartLens.Transmission.csproj",
       "packagesPath": "C:\\Users\\halit\\.nuget\\packages\\",
-      "outputPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Transmission\\obj\\",
+      "outputPath": "E:\\GIT\\SmartLens\\SmartLens.Transmission\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\halit\\AppData\\Roaming\\NuGet\\NuGet.Config",

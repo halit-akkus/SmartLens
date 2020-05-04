@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj": {}
+    "E:\\GIT\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj": {}
   },
   "projects": {
-    "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj": {
+    "E:\\GIT\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj",
+        "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj",
         "projectName": "SmartLens.DataAccess",
-        "projectPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj",
+        "projectPath": "E:\\GIT\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj",
         "packagesPath": "C:\\Users\\halit\\.nuget\\packages\\",
-        "outputPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.DataAccess\\obj\\",
+        "outputPath": "E:\\GIT\\SmartLens\\SmartLens.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\halit\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9/qArILJEiTf59uk56bH+uDKCZqQZadqmojlbWUizHmJFNZO4s1b8bNqpwDpF0CMl/qj+Z718/nx6w5+WTiLzA==",
+  "dgSpecHash": "Rd6OOyxobBzPqDylhQLGSuG2D+1nOJ7tSnb2iuiU+jbMK6uShDHneuSDSxwcm4BH7cE1tTB8ivqGzRlDvuGv2A==",
   "success": true,
-  "projectFilePath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj",
+  "projectFilePath": "E:\\GIT\\SmartLens\\SmartLens.DataAccess\\SmartLens.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\halit\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\halit\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

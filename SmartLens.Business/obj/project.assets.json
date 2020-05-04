@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj",
+      "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj",
       "projectName": "SmartLens.Business",
-      "projectPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj",
+      "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj",
       "packagesPath": "C:\\Users\\halit\\.nuget\\packages\\",
-      "outputPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.Business\\obj\\",
+      "outputPath": "E:\\GIT\\SmartLens\\SmartLens.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\halit\\AppData\\Roaming\\NuGet\\NuGet.Config",

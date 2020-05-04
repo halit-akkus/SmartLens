@@ -112,11 +112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.UICoreMVC\\SmartLens.UICoreMVC.fsproj",
+      "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens.UICoreMVC\\SmartLens.UICoreMVC.fsproj",
       "projectName": "SmartLens.UICoreMVC",
-      "projectPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.UICoreMVC\\SmartLens.UICoreMVC.fsproj",
+      "projectPath": "E:\\GIT\\SmartLens\\SmartLens.UICoreMVC\\SmartLens.UICoreMVC.fsproj",
       "packagesPath": "C:\\Users\\halit\\.nuget\\packages\\",
-      "outputPath": "E:\\GIT\\SmartLens\\SmartLens\\SmartLens.UICoreMVC\\obj\\",
+      "outputPath": "E:\\GIT\\SmartLens\\SmartLens.UICoreMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\halit\\AppData\\Roaming\\NuGet\\NuGet.Config",
