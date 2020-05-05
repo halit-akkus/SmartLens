@@ -5,7 +5,7 @@ using SmartLens.Core.Entities;
 
 namespace SmartLens.Entities.Concrate
 {
-    class User:IEntity
+   public class User:IEntity
     {
         public Guid Id { get; set; }
         public string  Name { get; set; }

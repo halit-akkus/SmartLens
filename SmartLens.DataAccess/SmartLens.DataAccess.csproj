@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrate\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartLens.Core\SmartLens.Core.csproj" />
+    <ProjectReference Include="..\SmartLens.Entities\SmartLens.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,5 @@
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Core.dll
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Entities.dll
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csprojAssemblyReference.cache
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.AssemblyInfoInputs.cache
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.AssemblyInfo.cs
