@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <ProjectReference Include="..\SmartLens.DataAccess\SmartLens.DataAccess.csproj" />
+    <ProjectReference Include="..\SmartLens.Entities\SmartLens.Entities.csproj" />
   </ItemGroup>
 
 </Project>
