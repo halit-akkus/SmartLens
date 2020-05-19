@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SmartLens.Business\SmartLens.Business.csproj" />
+  </ItemGroup>
+
 </Project>

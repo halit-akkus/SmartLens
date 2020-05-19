@@ -3,3 +3,12 @@ E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Entitie
 E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csprojAssemblyReference.cache
 E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.AssemblyInfoInputs.cache
 E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.AssemblyInfo.cs
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.DataAccess.deps.json
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.DataAccess.dll
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.DataAccess.pdb
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Core.pdb
+E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Entities.pdb
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csproj.CoreCompileInputs.cache
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csproj.CopyComplete
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.dll
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.pdb
