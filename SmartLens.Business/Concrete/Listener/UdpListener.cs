@@ -23,6 +23,7 @@ namespace SmartLens.Business.Concrete.Listener
             {
                 Console.WriteLine("Waiting for broadcast");
                 var bytes = await _listener.ReceiveAsync();
+                _listener.Close();
                 return bytes.Buffer;
             }
             catch (SocketException e)
