@@ -33,6 +33,7 @@ namespace SmartLens.Business.Concrete.Listener
             finally
             {
                 _listener.Close();
+               
             }
             return new byte[] { };
         }
