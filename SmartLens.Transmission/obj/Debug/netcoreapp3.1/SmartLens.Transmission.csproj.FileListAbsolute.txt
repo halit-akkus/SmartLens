@@ -17,7 +17,6 @@ E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transm
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.dll
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Transmission.pdb
 E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.csprojAssemblyReference.cache
-E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.csproj.CoreCompileInputs.cache
 E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.AssemblyInfoInputs.cache
 E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.AssemblyInfo.cs
 E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.dll
@@ -63,3 +62,9 @@ E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Core.p
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.DataAccess.pdb
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.Entities.pdb
 E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.csproj.CopyComplete
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transmission.csproj.CoreCompileInputs.cache

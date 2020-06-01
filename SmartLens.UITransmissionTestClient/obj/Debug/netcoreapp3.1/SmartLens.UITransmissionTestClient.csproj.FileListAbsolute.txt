@@ -5,9 +5,16 @@ E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\Smar
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.dll
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.pdb
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csprojAssemblyReference.cache
-E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.CoreCompileInputs.cache
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.AssemblyInfoInputs.cache
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.AssemblyInfo.cs
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.dll
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.pdb
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.genruntimeconfig.cache
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.CopyComplete
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.ResolveComReference.cache
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.CoreCompileInputs.cache

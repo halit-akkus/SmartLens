@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "nXp4AimN04ayU5zlo2Mp0pDqWo01mQa/lKBLYhnk0xPUIdB1fdjAEupQcSp4QPkm5OOSAXfb46OxkjZkpjZmbQ==",
+  "dgSpecHash": "eJ5DQPcWUPAD9R7OApF9FU9BGtDd1R77ocBfun4eGkAWSbMe3/q81bO76xc9vPgEEbVPVIzQyiHWBFNrJyZHKQ==",
   "success": true,
   "projectFilePath": "E:\\GIT\\SmartLens\\SmartLens.UITransmissionTestClient\\SmartLens.UITransmissionTestClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\halit\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\halit\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\halit\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\halit\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

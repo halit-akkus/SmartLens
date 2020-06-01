@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "FSharp.Core/4.7.0": {
+      "FSharp.Core/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/FSharp.Core.dll": {}
@@ -55,14 +55,15 @@
     }
   },
   "libraries": {
-    "FSharp.Core/4.7.0": {
-      "sha512": "6Bf2qzSCaJoP6tTfO+a5muUS7QbyJANqSut73zQvwQ9It5P0ITz9VKseeia2ofco30c55EQ0jA2wf2+A2gpGnw==",
+    "FSharp.Core/4.7.1": {
+      "sha512": "cQ4Dn5mFIWnJF8MmL49k2V6L8mtInDrXopskNFbpC4lsPdspTn7WzUQLylB4HU4tpi76ManXMVCAvtlYowTfHQ==",
       "type": "package",
-      "path": "fsharp.core/4.7.0",
+      "path": "fsharp.core/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "fsharp.core.4.7.0.nupkg.sha512",
+        "Icon.png",
+        "fsharp.core.4.7.1.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/net45/FSharp.Core.dll",
         "lib/net45/FSharp.Core.optdata",
@@ -103,7 +104,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "FSharp.Core >= 4.7.0"
+      "FSharp.Core >= 4.7.1"
     ]
   },
   "packageFolders": {
@@ -140,7 +141,7 @@
         "dependencies": {
           "FSharp.Core": {
             "target": "Package",
-            "version": "[4.7.0, )",
+            "version": "[4.7.1, )",
             "generatePathProperty": true
           }
         },
@@ -154,6 +155,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -162,7 +169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
