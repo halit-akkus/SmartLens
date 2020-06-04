@@ -13,6 +13,7 @@ using System.Timers;
 
 namespace SmartLens.Transmission
 {
+   
     class Program
     {
         private static int Port;
@@ -28,7 +29,14 @@ namespace SmartLens.Transmission
         {
             Console.ForegroundColor = (ConsoleColor)_rnd.Next(0, 16);
         }
-       public static void Effect(object arr)
+        public static void ClearCurrent(int size)
+        {
+            int currentLineCursor = Console.CursorTop;
+            Console.SetCursorPosition(size, Console.CursorTop);
+            Console.Write(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(size, currentLineCursor);
+        }
+        public static void Effect(object arr)
         {
             string[] result = (string[])arr;
             while (true)
@@ -37,6 +45,7 @@ namespace SmartLens.Transmission
                 {
                     Console.Write(result[i]);
                     Thread.Sleep(200);
+                    ClearCurrent(21);
                 }
             }
         }
@@ -53,11 +62,12 @@ namespace SmartLens.Transmission
         {
                 SetColor();
                 byte[] bytes = await udpListener.StartListener();
-                Image ımage = byteToImage(bytes);
-               // byteToImage(bytes).Save("c.jpg", ImageFormat.Jpeg);
+            var ms = new MemoryStream(bytes);
+            var img  = Image.FromStream(ms);
+            img.Save("RequestImg\\Img.jpg");
                 signal = true;
                 SetColor(ConsoleColor.Gray);
-                Console.WriteLine($" - Received broadcast from {ıPEndPoint}: = > {++RequestCount}");
+                Console.WriteLine($" => Received;  {ıPEndPoint}: = > {++RequestCount}");
         }
 
         static void ServerStarted(string[] args)
@@ -90,15 +100,14 @@ namespace SmartLens.Transmission
         }
         static  void Main(string[] args)
         {
-            new Thread(new ThreadStart(cmd)).Start();
+           // new Thread(new ThreadStart(cmd)).Start();
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 1000;
             aTimer.Enabled = true;
-
-
+            string[] arr = new string[] { "/","-","\\","|" };
             SetColor(ConsoleColor.White);
-            new Thread(new ParameterizedThreadStart(Effect)).Start(new string[] { "|", "/", "--", "\\" });
+            new Thread(new ParameterizedThreadStart(Effect)).Start(arr);
             ServerStarted(args);
           
         }
