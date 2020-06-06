@@ -15,7 +15,11 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "SmartLens.UICoreMVC", "Smar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLens.Transmission", "SmartLens.Transmission\SmartLens.Transmission.csproj", "{D21C28F3-2929-412E-AFB2-02EF97D7AE77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.UITransmissionTestClient", "SmartLens.UITransmissionTestClient\SmartLens.UITransmissionTestClient.csproj", "{7298E228-9112-4ADF-804F-79D19F340D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLens.UITransmissionTestClient", "SmartLens.UITransmissionTestClient\SmartLens.UITransmissionTestClient.csproj", "{7298E228-9112-4ADF-804F-79D19F340D7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SERVER", "SERVER", "{2A5BCE12-EBB0-45B3-8E15-ECAF2A98B45E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLens.WinFormUI", "SmartLens.WinFormUI\SmartLens.WinFormUI.csproj", "{14853BD6-FFF3-435F-82AF-57B40201AB10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +55,18 @@ Global
 		{7298E228-9112-4ADF-804F-79D19F340D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7298E228-9112-4ADF-804F-79D19F340D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7298E228-9112-4ADF-804F-79D19F340D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14853BD6-FFF3-435F-82AF-57B40201AB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14853BD6-FFF3-435F-82AF-57B40201AB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14853BD6-FFF3-435F-82AF-57B40201AB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14853BD6-FFF3-435F-82AF-57B40201AB10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{735AB071-2D56-43B5-BFCE-DFC01A6567E1} = {2A5BCE12-EBB0-45B3-8E15-ECAF2A98B45E}
+		{D21C28F3-2929-412E-AFB2-02EF97D7AE77} = {2A5BCE12-EBB0-45B3-8E15-ECAF2A98B45E}
+		{14853BD6-FFF3-435F-82AF-57B40201AB10} = {2A5BCE12-EBB0-45B3-8E15-ECAF2A98B45E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6D617B7-3665-4BCB-8B03-E83DC2735444}

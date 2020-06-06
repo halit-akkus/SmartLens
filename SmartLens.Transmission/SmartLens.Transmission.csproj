@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -26,6 +26,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SmartLens.Business\SmartLens.Business.csproj" />
+    <ProjectReference Include="..\SmartLens.WinFormUI\SmartLens.WinFormUI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Graphics\" />
   </ItemGroup>
 
 </Project>

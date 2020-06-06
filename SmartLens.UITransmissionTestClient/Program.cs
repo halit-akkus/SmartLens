@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using System.Windows.Forms;
+
 
 namespace SmartLens.UITransmissionTestClient
 {
@@ -15,14 +15,12 @@ namespace SmartLens.UITransmissionTestClient
     {
       static  private Image Screenshot()
         {
-
             var Screenshot = new Bitmap(500,500);
             Graphics GFX = Graphics.FromImage(Screenshot);
             GFX.CopyFromScreen(0, 0, 0, 0,new Size(500, 500));
 
             return Screenshot;
         }
-
       static  public byte[] ImageToByte(Image imageIn)
         {
           using (var ms = new MemoryStream())
@@ -31,12 +29,8 @@ namespace SmartLens.UITransmissionTestClient
                 return ms.ToArray();
             }
         }
-
-
-
         static void Main(string[] args)
         {
-
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
             IPAddress broadcast = IPAddress.Parse("127.0.0.1");
@@ -51,7 +45,7 @@ namespace SmartLens.UITransmissionTestClient
                    s.SendTo(sendbuf,ep);
 
                 Console.WriteLine("Message sent to the broadcast address");
-                Thread.Sleep(800);
+                Thread.Sleep(200);
             }
         }
     }

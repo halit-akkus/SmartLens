@@ -1,4 +1,7 @@
-﻿using SmartLens.Business.Concrete.Listener;
+﻿
+
+using SmartLens.Business.Concrete.Listener;
+using SmartLens.WinFormUI;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -7,27 +10,33 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Timers;
+using System.Windows.Forms;
 
 namespace SmartLens.Transmission
 {
-   
     class Program
     {
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         private static int Port;
         private static BigInteger RequestCount;
         private static bool signal = false;
         private static Random _rnd = new Random();
         static int fps = 0;
+        private static ConsoleColor[] Color = { ConsoleColor.DarkYellow, ConsoleColor.Gray,  ConsoleColor.DarkGreen,ConsoleColor.DarkRed,ConsoleColor.DarkCyan};
         static void SetColor(ConsoleColor fore)
         {
             Console.ForegroundColor = fore;
         }
         static void SetColor()
         {
-            Console.ForegroundColor = (ConsoleColor)_rnd.Next(0, 16);
+         Console.ForegroundColor = Color[_rnd.Next(0,Color.Length)];
         }
         public static void ClearCurrent(int size)
         {
@@ -66,8 +75,12 @@ namespace SmartLens.Transmission
             var img  = Image.FromStream(ms);
             img.Save("RequestImg\\Img.jpg");
                 signal = true;
+            ClearCurrent(21);
                 SetColor(ConsoleColor.Gray);
-                Console.WriteLine($" => Received;  {ıPEndPoint}: = > {++RequestCount}");
+            Console.Write($" Step #{++RequestCount}");
+            if (RequestCount % 100 == 0)
+                Console.Clear();
+                Console.WriteLine($" => Received;  {ıPEndPoint.Address}: {((int)bytes.Length/1024)}KB");
         }
 
         static void ServerStarted(string[] args)
@@ -79,9 +92,9 @@ namespace SmartLens.Transmission
             var IpEndPoint = new IPEndPoint(IPAddress.Any, Port);
             while (true)
             {
-                
-                StartListener(new UdpListener(new UdpClient(Port), IpEndPoint), IpEndPoint);
+                StartListener(new UdpListener(new    UdpClient(Port), IpEndPoint),  IpEndPoint);
                 fps++;
+                Console.Write("Waiting for broadcast");
                 while (!signal)
                     Thread.Sleep(1);
 
@@ -100,16 +113,22 @@ namespace SmartLens.Transmission
         }
         static  void Main(string[] args)
         {
-           // new Thread(new ThreadStart(cmd)).Start();
+            // new Thread(new ThreadStart(cmd)).Start();
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 1000;
             aTimer.Enabled = true;
-            string[] arr = new string[] { "/","-","\\","|" };
-            SetColor(ConsoleColor.White);
+            string[] arr = new string[] { "/", "-", "\\", "|" };
+
+            AllocConsole();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
             new Thread(new ParameterizedThreadStart(Effect)).Start(arr);
             ServerStarted(args);
-          
+
+            
+
         }
     }
 }

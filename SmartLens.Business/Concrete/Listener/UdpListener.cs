@@ -21,7 +21,6 @@ namespace SmartLens.Business.Concrete.Listener
         {
             try
             {
-                Console.Write("Waiting for broadcast");
                 var bytes = await _listener.ReceiveAsync();
                 _listener.Close();
                 return bytes.Buffer;

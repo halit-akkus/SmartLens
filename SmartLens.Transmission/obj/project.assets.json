@@ -1348,6 +1348,19 @@
         "runtime": {
           "bin/placeholder/SmartLens.Entities.dll": {}
         }
+      },
+      "SmartLens.WinFormUI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SmartLens.WinFormUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartLens.WinFormUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -5101,11 +5114,17 @@
       "type": "project",
       "path": "../SmartLens.Entities/SmartLens.Entities.csproj",
       "msbuildProject": "../SmartLens.Entities/SmartLens.Entities.csproj"
+    },
+    "SmartLens.WinFormUI/1.0.0": {
+      "type": "project",
+      "path": "../SmartLens.WinFormUI/SmartLens.WinFormUI.csproj",
+      "msbuildProject": "../SmartLens.WinFormUI/SmartLens.WinFormUI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "SmartLens.Business >= 1.0.0",
+      "SmartLens.WinFormUI >= 1.0.0",
       "System.Drawing.Common >= 4.7.0"
     ]
   },
@@ -5137,6 +5156,9 @@
           "projectReferences": {
             "E:\\GIT\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj": {
               "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj"
+            },
+            "E:\\GIT\\SmartLens\\SmartLens.WinFormUI\\SmartLens.WinFormUI.csproj": {
+              "projectPath": "E:\\GIT\\SmartLens\\SmartLens.WinFormUI\\SmartLens.WinFormUI.csproj"
             }
           }
         }
@@ -5174,6 +5196,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"

@@ -1,0 +1,15 @@
+E:\GIT\SmartLens\SmartLens.WinFormUI\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.exe
+E:\GIT\SmartLens\SmartLens.WinFormUI\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.deps.json
+E:\GIT\SmartLens\SmartLens.WinFormUI\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.runtimeconfig.json
+E:\GIT\SmartLens\SmartLens.WinFormUI\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.runtimeconfig.dev.json
+E:\GIT\SmartLens\SmartLens.WinFormUI\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.dll
+E:\GIT\SmartLens\SmartLens.WinFormUI\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.pdb
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.csprojAssemblyReference.cache
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.Form1.resources
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.csproj.GenerateResource.cache
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.AssemblyInfoInputs.cache
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.AssemblyInfo.cs
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.csproj.CoreCompileInputs.cache
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.dll
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.pdb
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.genruntimeconfig.cache
