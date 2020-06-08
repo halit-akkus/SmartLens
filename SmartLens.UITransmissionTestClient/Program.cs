@@ -34,6 +34,7 @@ namespace SmartLens.UITransmissionTestClient
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
             IPAddress broadcast = IPAddress.Parse("127.0.0.1");
+            var rnd = new Random();
             while (true)
             {
                byte[] sendbuf = ImageToByte(Screenshot());
@@ -44,8 +45,8 @@ namespace SmartLens.UITransmissionTestClient
 
                    s.SendTo(sendbuf,ep);
 
-                Console.WriteLine("Message sent to the broadcast address");
-                Thread.Sleep(200);
+                Console.WriteLine(rnd.Next(0, 99999));
+                Thread.Sleep(1);
             }
         }
     }

@@ -18,12 +18,12 @@ using System.Windows.Forms;
 
 namespace SmartLens.Transmission
 {
-    class Program
+  static  class Program
     {
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
-
+        private static  Form1 form1 { get; set; }
         private static int Port;
         private static BigInteger RequestCount;
         private static bool signal = false;
@@ -58,10 +58,9 @@ namespace SmartLens.Transmission
                 }
             }
         }
-       
         public static Image byteToImage(byte[] byteArrayIn)
         {
-            using (MemoryStream fileStream = new MemoryStream(byteArrayIn))
+            using (var fileStream = new MemoryStream(byteArrayIn))
             {
                 return  Image.FromStream(fileStream);
             }
@@ -70,29 +69,29 @@ namespace SmartLens.Transmission
         static async void StartListener(UdpListener udpListener, IPEndPoint ıPEndPoint)
         {
                 SetColor();
-                byte[] bytes = await udpListener.StartListener();
+            byte[] bytes = await udpListener.StartListener();
             var ms = new MemoryStream(bytes);
             var img  = Image.FromStream(ms);
-            img.Save("RequestImg\\Img.jpg");
+            string size = ((int)bytes.Length / 1024).ToString();
+            form1.GetImage(img,size);
+            //img.Save("RequestImg\\Img.jpg");
                 signal = true;
             ClearCurrent(21);
                 SetColor(ConsoleColor.Gray);
             Console.Write($" Step #{++RequestCount}");
-            if (RequestCount % 100 == 0)
-                Console.Clear();
-                Console.WriteLine($" => Received;  {ıPEndPoint.Address}: {((int)bytes.Length/1024)}KB");
+            
+            Console.WriteLine($" => Received;  {ıPEndPoint.Address}: {size}KB");
         }
-
-        static void ServerStarted(string[] args)
+        static void ServerStarted(object obj)
         {
-           
+            string[] args = (string[])obj;
             Port = args.Length > 0 ? int.Parse(args[0]) : 11000;
             Console.WindowHeight = (Console.LargestWindowHeight * 9 / 10);
             Console.WriteLine("[PORT NO:{0}]", Port);
             var IpEndPoint = new IPEndPoint(IPAddress.Any, Port);
             while (true)
             {
-                StartListener(new UdpListener(new    UdpClient(Port), IpEndPoint),  IpEndPoint);
+                StartListener(new UdpListener(new UdpClient(Port), IpEndPoint),  IpEndPoint);
                 fps++;
                 Console.Write("Waiting for broadcast");
                 while (!signal)
@@ -101,34 +100,31 @@ namespace SmartLens.Transmission
                 signal = false;
             }
         }
-      static void cmd()
-        {
-            Process.Start("cmd.exe");
-        }
-      
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            //Console.WriteLine(fps);
+            form1.GetFps(fps.ToString());
             fps = 0;
         }
-        static  void Main(string[] args)
+        private static void SetTimer()
         {
-            // new Thread(new ThreadStart(cmd)).Start();
-            System.Timers.Timer aTimer = new System.Timers.Timer();
+            var aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 1000;
             aTimer.Enabled = true;
-            string[] arr = new string[] { "/", "-", "\\", "|" };
+        }
+        static  void Main(string[] args)
+        {
+            SetTimer();
 
+            new Thread(new ParameterizedThreadStart(Effect)).Start(new string[] { "/", "-", "\\", "|" });
+           
+            new Thread(new ParameterizedThreadStart(ServerStarted)).Start(args);
+            
             AllocConsole();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            new Thread(new ParameterizedThreadStart(Effect)).Start(arr);
-            ServerStarted(args);
-
-            
-
+            form1 = new Form1();
+            Application.Run(form1);
         }
     }
 }
