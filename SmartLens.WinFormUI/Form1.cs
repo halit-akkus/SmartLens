@@ -23,7 +23,7 @@ namespace SmartLens.WinFormUI
         static int height { get; set; }
         static string total { get; set; }
 
-        public void GetFps(string fps)
+        public void GetFps(string fps,string downloadsize)
         {
             Img.GetFps(fps);
             fps += " hz";
@@ -37,12 +37,25 @@ namespace SmartLens.WinFormUI
             else
                 label1.Text = fps;
 
-           
+          
+            if (int.Parse(downloadsize) > 1024)
+                downloadsize = Math.Round((Convert.ToDouble( downloadsize) / 1024), 2) + " mb/s";
+            else total = downloadsize += " kb/s";
+            if (label10.InvokeRequired)
+            {
+                Action action = delegate {
+                    label10.Text = downloadsize;
+                };
+                label10.Invoke(action);
+            }
+            else
+                label10.Text = downloadsize;
+
         }
        
-        public void GetImage(Image ımage,string size)
+        public void GetImage(Image ımage,string size,string step)
         {
-           
+            step = "#" + step;
              Img.GetImage(ımage, size);
              height = (int.Parse(size) + height);
            
@@ -70,6 +83,16 @@ namespace SmartLens.WinFormUI
             }
             else
                 label6.Text = size;
+
+            if (label8.InvokeRequired)
+            {
+                Action action = delegate {
+                    label8.Text = step;
+                };
+                label8.Invoke(action);
+            }
+            else
+                label8.Text = step;
         }
 
 
@@ -78,9 +101,9 @@ namespace SmartLens.WinFormUI
             if (FormWindowState.Minimized == WindowState)
             {
                 notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-                notifyIcon1.BalloonTipText = "Bildirim içeriği";
-                notifyIcon1.BalloonTipTitle = "Bildirim başlığı";
-                notifyIcon1.Text = "Bildirim Text";
+                notifyIcon1.BalloonTipText = "İzlence menüsüne buradan ulaşabilirsiniz.";
+                notifyIcon1.BalloonTipTitle = "Smart Lens";
+                notifyIcon1.Text = "Smart Lens";
                 notifyIcon1.Visible = true;
                 notifyIcon1.ShowBalloonTip(30000);
             }
@@ -97,7 +120,11 @@ namespace SmartLens.WinFormUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipText = "Server Started";
+            notifyIcon1.BalloonTipTitle = "Smart Lens";
+            notifyIcon1.Visible = true;
+            notifyIcon1.ShowBalloonTip(30000);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,9 +132,16 @@ namespace SmartLens.WinFormUI
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+      
+
+        private void exitStripMenu(object sender, EventArgs e)
+        {
+             this.Close();
+        }
+        private void ShowDisplay(object sender, EventArgs e)
         {
             Img.Show();
         }
+       
     }
 }

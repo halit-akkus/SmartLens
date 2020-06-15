@@ -29,24 +29,23 @@ namespace SmartLens.UITransmissionTestClient
                 return ms.ToArray();
             }
         }
+       
         static void Main(string[] args)
         {
-            Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            Console.ReadLine();
+            Console.WriteLine("Started");
+           
+            var s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
             IPAddress broadcast = IPAddress.Parse("127.0.0.1");
-            var rnd = new Random();
             while (true)
             {
                byte[] sendbuf = ImageToByte(Screenshot());
                 IPEndPoint ep = new IPEndPoint(broadcast, 11000);
-
                 if (sendbuf.Length > 65505)
                     continue;
-
                    s.SendTo(sendbuf,ep);
-
-                Console.WriteLine(rnd.Next(0, 99999));
-                Thread.Sleep(1);
+                //Thread.Sleep(10);
             }
         }
     }

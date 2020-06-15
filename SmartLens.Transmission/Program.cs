@@ -29,14 +29,16 @@ namespace SmartLens.Transmission
         private static bool signal = false;
         private static Random _rnd = new Random();
         static int fps = 0;
-        private static ConsoleColor[] Color = { ConsoleColor.DarkYellow, ConsoleColor.Gray,  ConsoleColor.DarkGreen,ConsoleColor.DarkRed,ConsoleColor.DarkCyan};
+        static int DownloadSize = 0;
+
+        private static ConsoleColor[] Colors = { ConsoleColor.DarkYellow, ConsoleColor.Gray,  ConsoleColor.DarkGreen,ConsoleColor.DarkRed,ConsoleColor.DarkCyan};
         static void SetColor(ConsoleColor fore)
         {
             Console.ForegroundColor = fore;
         }
         static void SetColor()
         {
-         Console.ForegroundColor = Color[_rnd.Next(0,Color.Length)];
+         Console.ForegroundColor = Colors[_rnd.Next(0, Colors.Length)];
         }
         public static void ClearCurrent(int size)
         {
@@ -58,6 +60,20 @@ namespace SmartLens.Transmission
                 }
             }
         }
+        private static Image ImageToGray(Bitmap bmp)
+        {
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    Color old = bmp.GetPixel(x, y);
+                    int avg = (old.R + old.G + old.B) / 3;
+                    Color yeni = Color.FromArgb(old.A, avg, avg, avg);
+                    bmp.SetPixel(x, y, yeni);
+                }
+            }
+            return bmp;
+        }
         public static Image byteToImage(byte[] byteArrayIn)
         {
             using (var fileStream = new MemoryStream(byteArrayIn))
@@ -73,12 +89,13 @@ namespace SmartLens.Transmission
             var ms = new MemoryStream(bytes);
             var img  = Image.FromStream(ms);
             string size = ((int)bytes.Length / 1024).ToString();
-            form1.GetImage(img,size);
+            form1.GetImage(img,size, (++RequestCount).ToString());
+            DownloadSize += int.Parse(size);
             //img.Save("RequestImg\\Img.jpg");
                 signal = true;
             ClearCurrent(21);
                 SetColor(ConsoleColor.Gray);
-            Console.Write($" Step #{++RequestCount}");
+            Console.Write($" Step #{RequestCount}");
             
             Console.WriteLine($" => Received;  {ıPEndPoint.Address}: {size}KB");
         }
@@ -93,6 +110,7 @@ namespace SmartLens.Transmission
             {
                 StartListener(new UdpListener(new UdpClient(Port), IpEndPoint),  IpEndPoint);
                 fps++;
+                
                 Console.Write("Waiting for broadcast");
                 while (!signal)
                     Thread.Sleep(1);
@@ -102,9 +120,11 @@ namespace SmartLens.Transmission
         }
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            form1.GetFps(fps.ToString());
+            form1.GetFps(fps.ToString(),DownloadSize.ToString());
             fps = 0;
+            DownloadSize = 0;
         }
+   
         private static void SetTimer()
         {
             var aTimer = new System.Timers.Timer();
