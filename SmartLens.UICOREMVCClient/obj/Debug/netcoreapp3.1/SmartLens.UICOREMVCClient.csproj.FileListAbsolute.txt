@@ -103,3 +103,5 @@ E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UIC
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.Views.pdb
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\SetFrame.cshtml.g.cs
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\package-lock.json
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\package.json

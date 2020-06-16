@@ -6,6 +6,12 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="node_modules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Js\WebCam\webcam.min.js" />
+    <None Include="wwwroot\Js\Jquery\jquery-3.1.1.min.js" />
   </ItemGroup>
 
   <ItemGroup>
