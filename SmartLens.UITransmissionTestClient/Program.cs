@@ -1,4 +1,5 @@
 ﻿
+using SmartLens.Client;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -32,20 +33,15 @@ namespace SmartLens.UITransmissionTestClient
        
         static void Main(string[] args)
         {
+            
+            var client = new UDP_CLIENT("127.0.0.1", 11000);
+
             Console.ReadLine();
             Console.WriteLine("Started");
-           
-            var s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-
-            IPAddress broadcast = IPAddress.Parse("127.0.0.1");
             while (true)
             {
-               byte[] sendbuf = ImageToByte(Screenshot());
-                IPEndPoint ep = new IPEndPoint(broadcast, 11000);
-                if (sendbuf.Length > 65505)
-                    continue;
-                   s.SendTo(sendbuf,ep);
-                //Thread.Sleep(10);
+                client.SendBuffer(ImageToByte(Screenshot()));
+                Thread.Sleep(5);
             }
         }
     }

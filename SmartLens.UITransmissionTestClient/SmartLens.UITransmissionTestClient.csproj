@@ -30,4 +30,8 @@
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SmartLens.Client\SmartLens.Client.csproj" />
+  </ItemGroup>
+
 </Project>

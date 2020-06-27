@@ -30,7 +30,6 @@ namespace SmartLens.UICOREMVCClient
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseStaticFiles();
 
             app.UseDirectoryBrowser(new DirectoryBrowserOptions

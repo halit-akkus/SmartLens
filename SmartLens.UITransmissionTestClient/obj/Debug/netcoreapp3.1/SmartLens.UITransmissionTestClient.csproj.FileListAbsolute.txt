@@ -18,3 +18,5 @@ E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\runt
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.CopyComplete
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.ResolveComReference.cache
 E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\obj\Debug\netcoreapp3.1\SmartLens.UITransmissionTestClient.csproj.CoreCompileInputs.cache
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\SmartLens.Client.dll
+E:\GIT\SmartLens\SmartLens.UITransmissionTestClient\bin\Debug\netcoreapp3.1\SmartLens.Client.pdb

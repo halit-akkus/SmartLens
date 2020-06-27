@@ -4,9 +4,7 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Set Frame</h1>
-
-
+<h1>Set Frame: <span style="color:red" id="fps"></span> FPS</h1>
 <style>
 	#my_camera {
 		width: 320px;
@@ -15,29 +13,57 @@
 	}
 </style>
 
-<div id="my_camera"></div>
-<input type=button value="Take Snapshot" onClick="take_snapshot()">
-
-<div id="results"></div>
+<div style="display:none" id="my_camera"></div>
+<input type=button value="Take Snapshot" onClick="setfr(1)">
+<input type="range" id="range2" onchange="setFps()" min="1" max="1000" />
+<div  id="results"></div>
 <script src="../Js/WebCam/webcam.min.js"></script>
-
+<script src="~/Js/Jquery/jquery.min.js"></script>
 <script language="JavaScript">
+
 	Webcam.set({
 		width: 320,
 		height: 240,
 		image_format: 'jpeg',
 		jpeg_quality: 90
 	});
-	Webcam.attach('#my_camera');</script>
+	Webcam.attach('#my_camera');
+</script>
 
 <script language="JavaScript">
+	var intervall = null;
+	var countfps = 0;
+	function setFps() {
+		clearInterval(intervall);
+        setfr(parseInt($("#range2").val())); 
+    }
+	function setfr(int) {
+        intervall=setInterval(function () {
+			take_snapshot();
+		}, int);
+    }
 	function take_snapshot() {
-
-
+		countfps++;
 		Webcam.snap(function (data_uri) {
-
 			document.getElementById('results').innerHTML =
 				'<img src="' + data_uri + '"/>';
 		});
-	}</script>
+	}
+
+	function setImg() {
+		$.ajax({
+			url: "",
+
+		});
+    }
+
+	setInterval(function () {
+		if (countfps > 60) 
+			countfps = 60;
+        
+		$("#fps").html(countfps);
+		countfps = 0;
+	}, 1000);
+
+</script>
 

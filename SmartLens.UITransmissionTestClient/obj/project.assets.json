@@ -51,6 +51,16 @@
             "rid": "win"
           }
         }
+      },
+      "SmartLens.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SmartLens.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartLens.Client.dll": {}
+        }
       }
     }
   },
@@ -139,10 +149,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "SmartLens.Client/1.0.0": {
+      "type": "project",
+      "path": "../SmartLens.Client/SmartLens.Client.csproj",
+      "msbuildProject": "../SmartLens.Client/SmartLens.Client.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "SmartLens.Client >= 1.0.0",
       "System.Drawing.Common >= 4.7.0"
     ]
   },
@@ -171,7 +187,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\GIT\\SmartLens\\SmartLens.Client\\SmartLens.Client.csproj": {
+              "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Client\\SmartLens.Client.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
