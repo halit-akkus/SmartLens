@@ -11,8 +11,6 @@ namespace SmartLens.Client
       void SendBuffer(byte[] buffer);
         string _IpAddress { get; set; }
         int _Port { get; set; }
-        IPAddress _Broadcast { get; set; }
-        Socket _Socket { get; set; }
-        IPEndPoint _Ep { get; set; }
+        
     }
 }
