@@ -9,6 +9,7 @@ namespace SmartLens.Business.Abstract.Listener
 {
    public interface IListener
     {
+        string Message();
         Task<byte[]> StartListener();
     }
 }

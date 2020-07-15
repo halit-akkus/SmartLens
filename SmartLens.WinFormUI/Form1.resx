@@ -990,7 +990,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>145, 9</value>
+    <value>0, 9</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>43, 21</value>
@@ -1011,7 +1011,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1020,7 +1020,7 @@
     <value>Segoe UI, 15.75pt</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>184, 2</value>
+    <value>39, 2</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>36, 30</value>
@@ -1065,7 +1065,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>293, 24</value>
+    <value>268, 24</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
@@ -1083,7 +1083,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1122,7 +1122,7 @@
     <value>Segoe UI, 18pt</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>145, 0</value>
+    <value>125, 0</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>79, 32</value>
@@ -1149,7 +1149,7 @@
     <value>12, 43</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>263, 41</value>
+    <value>246, 41</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -1164,13 +1164,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>12, 96</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>263, 41</value>
+    <value>246, 41</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -1185,13 +1185,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>12, 152</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>263, 41</value>
+    <value>246, 41</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -1206,34 +1206,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, -1</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>140, 41</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>12, 208</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>263, 41</value>
+    <value>246, 41</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
@@ -1250,6 +1229,27 @@
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>13, 272</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>245, 41</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
@@ -1257,7 +1257,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>293, 297</value>
+    <value>268, 339</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

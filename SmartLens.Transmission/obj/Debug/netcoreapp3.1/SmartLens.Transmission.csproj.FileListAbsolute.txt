@@ -63,3 +63,10 @@ E:\GIT\SmartLens\SmartLens.Transmission\obj\Debug\netcoreapp3.1\SmartLens.Transm
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.exe
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.dll
 E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SmartLens.WinFormUI.pdb
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\log4net.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SuperSocket.Common.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SuperSocket.Facility.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SuperSocket.SocketBase.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SuperSocket.SocketEngine.dll
+E:\GIT\SmartLens\SmartLens.Transmission\bin\Debug\netcoreapp3.1\SuperWebSocket.dll

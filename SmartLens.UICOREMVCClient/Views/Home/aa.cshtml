@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "aa";
+  
+}
+
+
+    <html>
+    <head>
+        <title>Asp.Net Core ile Web Sockets Kullanımı</title>
+    </head>
+    <body>
+        <button id="btnConnect" type="submit">Connect</button><br />
+        Message : <input id="lblMessage" style="width:300px;" /><br />
+        <button id="btnSendMessage" type="submit">Send Message</button><br />
+        <button id="btnDisconnect" type="submit">Disconnect</button><br />
+        <script>
+    var btnConnect = document.getElementById("btnConnect");
+    var btnSendMessage=document.getElementById("btnSendMessage");
+    var lblMessage=document.getElementById("lblMessage");
+    var btnDisconnect=document.getElementById("btnDisconnect");
+    var socket;
+
+    btnConnect.onclick = function() {
+            socket = new WebSocket("ws://localhost:5556/nokya");
+            socket.onopen = function (e) {
+                console.log("Connected",e);
+            };
+            socket.onclose = function (e) {
+                console.log("Disconnected",e);
+            };
+            socket.onerror = function(e){
+                console.error(e.data);
+            };
+            socket.onmessage = function (e) {
+                console.log(e.data);
+            };
+        }
+
+    btnSendMessage.onclick = function () {
+            if (!socket || socket.readyState != WebSocket.OPEN) {
+                console.error("Houston we have a problem! Socket not connected.");
+            }
+            var data = lblMessage.value;
+            socket.send(data);
+            console.log(data);
+        }
+
+    btnDisconnect.onclick = function () {
+            if (!socket || socket.readyState != WebSocket.OPEN) {
+                console.error("Houston we have a problem! Socket not connected.");
+            }
+            socket.close(1000, "Closing from Apollo 13");
+        }
+
+        </script>
+    </body>
+    </html>

@@ -14,11 +14,13 @@ namespace SmartLens.UITransmissionTestClient
 {
     class Program
     {
-      static  private Image Screenshot()
+       
+        static  private Image Screenshot(int x, int y)
         {
             var Screenshot = new Bitmap(500,500);
             Graphics GFX = Graphics.FromImage(Screenshot);
-            GFX.CopyFromScreen(0, 0, 0, 0,new Size(500, 500));
+            var nrd = new Random();
+            GFX.CopyFromScreen(0, x, y, 0,new Size(500, 500));
 
             return Screenshot;
         }
@@ -34,14 +36,19 @@ namespace SmartLens.UITransmissionTestClient
         static void Main(string[] args)
         {
             
-            var client = new UDP_CLIENT("127.0.0.1", 11000);
+            var _client = new UDP_CLIENT("127.0.0.1", 11000);
 
-            Console.ReadLine();
+            
             Console.WriteLine("Started");
+
+            var  nrd = new Random();
+            int x = nrd.Next(0,800);
+            int y = nrd.Next(0, 100);
+
             while (true)
             {
-                client.SendBuffer(ImageToByte(Screenshot()));
-                Thread.Sleep(5);
+                _client.SendBuffer(ImageToByte(Screenshot(x,y)));
+                Thread.Sleep(1);
             }
         }
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -22,5 +23,13 @@ namespace SmartLens.UICOREMVCClient
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        public static IWebHost BuildWebHost(string[] args) =>
+          WebHost.CreateDefaultBuilder(args)
+              .UseUrls("http://localhost:5556/")
+              .UseStartup<Startup>()
+              .Build();
     }
+
 }
+

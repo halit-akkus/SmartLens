@@ -86,8 +86,6 @@ E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\ru\Microsoft.
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.csproj.CoreCompileInputs.cache
-E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.MvcApplicationPartsAssemblyInfo.cache
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.csproj.CopyComplete
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.dll
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.pdb
@@ -105,3 +103,8 @@ E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\Razor\Views\H
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\package-lock.json
 E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\package.json
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\SmartLens.Client.dll
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\bin\Debug\netcoreapp3.1\SmartLens.Client.pdb
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.csproj.CoreCompileInputs.cache
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\SmartLens.UICOREMVCClient.MvcApplicationPartsAssemblyInfo.cache
+E:\GIT\SmartLens\SmartLens.UICOREMVCClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\aa.cshtml.g.cs

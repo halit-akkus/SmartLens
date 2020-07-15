@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xaywY8412rYOvsj6t62bUIIzw625HidH2Gqh1KYGp/0QigPGnTFlg799fMXR6hnka8QRExYIzBE+ctJpq+Vz1A==",
+  "dgSpecHash": "vPi5C39RqEsgneo6pBNYBM/yqbPkJF4CO6CSHPTBs3B8eBzs1YinpVK3s+gOxGvPCmCVvx4xGrwn94uL7A3lWQ==",
   "success": true,
   "projectFilePath": "E:\\GIT\\SmartLens\\SmartLens.UICOREMVCClient\\SmartLens.UICOREMVCClient.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "C:\\Users\\halit\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\halit\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\halit\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\halit\\.nuget\\packages\\system.net.websockets\\4.3.0\\system.net.websockets.4.3.0.nupkg.sha512",
     "C:\\Users\\halit\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\halit\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\halit\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",

@@ -11,9 +11,9 @@ namespace SmartLens.UICOREMVCClient.Controllers
     public class HomeController : Controller
     {
         IClient _Client { get; set; }
-        public HomeController(IClient client)
+        public HomeController()
         {
-            _Client = client;
+            _Client = new UDP_CLIENT("127.0.0.1",11000);
         }
         public IActionResult Index()
         {
@@ -25,6 +25,11 @@ namespace SmartLens.UICOREMVCClient.Controllers
             return View();
         }
 
+        
+        public IActionResult aa()
+        {
+            return View();
+        }
         public void CaptureImg(byte[] buffer)
         {
             _Client.SendBuffer(buffer);

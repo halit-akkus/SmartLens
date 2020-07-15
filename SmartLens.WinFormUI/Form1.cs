@@ -132,8 +132,6 @@ namespace SmartLens.WinFormUI
             
         }
 
-      
-
         private void exitStripMenu(object sender, EventArgs e)
         {
              this.Close();

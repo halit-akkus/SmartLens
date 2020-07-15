@@ -16,6 +16,14 @@
           "SmartLens.Transmission.dll": {}
         }
       },
+      "log4net/2.0.3": {
+        "runtime": {
+          "lib/net40-full/log4net.dll": {
+            "assemblyVersion": "1.2.13.0",
+            "fileVersion": "1.2.13.0"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -266,6 +274,14 @@
           "Microsoft.NETCore.Platforms": "3.1.0"
         }
       },
+      "Newtonsoft.Json/6.0.2": {
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2.16931"
+          }
+        }
+      },
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -303,6 +319,34 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "SuperWebSocketNETServer/0.8.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.2",
+          "log4net": "2.0.3"
+        },
+        "runtime": {
+          "lib/net45/SuperSocket.Common.dll": {
+            "assemblyVersion": "1.5.3.0",
+            "fileVersion": "1.5.3.0"
+          },
+          "lib/net45/SuperSocket.Facility.dll": {
+            "assemblyVersion": "1.5.3.0",
+            "fileVersion": "1.5.3.0"
+          },
+          "lib/net45/SuperSocket.SocketBase.dll": {
+            "assemblyVersion": "1.5.3.0",
+            "fileVersion": "1.5.3.0"
+          },
+          "lib/net45/SuperSocket.SocketEngine.dll": {
+            "assemblyVersion": "1.5.3.0",
+            "fileVersion": "1.5.3.0"
+          },
+          "lib/net45/SuperWebSocket.dll": {
+            "assemblyVersion": "0.8.0.0",
+            "fileVersion": "0.8.0.0"
           }
         }
       },
@@ -823,7 +867,8 @@
       "SmartLens.Business/1.0.0": {
         "dependencies": {
           "SmartLens.DataAccess": "1.0.0",
-          "SmartLens.Entities": "1.0.0"
+          "SmartLens.Entities": "1.0.0",
+          "SuperWebSocketNETServer": "0.8.0"
         },
         "runtime": {
           "SmartLens.Business.dll": {}
@@ -867,6 +912,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "log4net/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rxMHzK5efGPo5XtRnuUGO4tfW5l74Aji6kVmtMAt2SgcB5PHBNtNY7yj2LCI2VtKrLPO7kCKR6kH6lIZggq3Gg==",
+      "path": "log4net/2.0.3",
+      "hashPath": "log4net.2.0.3.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",
@@ -1043,6 +1095,13 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "Newtonsoft.Json/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dYTDxbpOKlwlWzZLrKOXHI/AoLXdixZM4z3Ez8c5Xgy+bLZty7UWFSoI5B7hqSGntI2GWTqS0Oo8K41Fh+8POw==",
+      "path": "newtonsoft.json/6.0.2",
+      "hashPath": "newtonsoft.json.6.0.2.nupkg.sha512"
+    },
     "runtime.native.System/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1077,6 +1136,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SuperWebSocketNETServer/0.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PTBLuRy607WnkOx069aZrfK48OW2lpQ9TBq+Y5BdIfaickfeIozwBWQjgExdIj9YB+z7ViJ6DfWAfXOpXcHouQ==",
+      "path": "superwebsocketnetserver/0.8.0",
+      "hashPath": "superwebsocketnetserver.0.8.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

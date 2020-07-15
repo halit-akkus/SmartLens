@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "SuperWebSocketNETServer": {
+              "target": "Package",
+              "version": "[0.8.0, )"
             }
           },
           "imports": [
