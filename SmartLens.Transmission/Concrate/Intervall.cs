@@ -67,9 +67,7 @@ namespace SmartLens.Transmission.Concrate
             GetImage(img, size);
             DownloadSize(currentdownload);
             SetFps();
-            Console.Write($" Step #{requestCount()}");
-
-            Console.WriteLine($" => Received : {size}KB");
+            Console.WriteLine($" OK => Received : {size}KB");
         }
     }
 }
