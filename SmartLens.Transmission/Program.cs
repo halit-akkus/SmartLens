@@ -26,11 +26,20 @@ namespace SmartLens.Transmission
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
-       
+        private static int _port;
         
         static  void Main(string[] args)
         {
-            new Thread(new ParameterizedThreadStart(Server.ServerStarted)).Start(args);
+            string[] obj = (string[])args;
+            _port = args.Length > 0 ? int.Parse(args[0]) : 11000;
+            /*--------------------------------------------------------*/
+            var serverFact = new ServerFactory();
+            IListener listener = serverFact.CreateListener(Standart.ListenerType.Udp,_port);
+           
+            var startListener = new Thread(delegate() {
+                Server.ServerStarted(_port, listener);
+            });
+            startListener.Start();
 
             AllocConsole();
             Application.EnableVisualStyles();
