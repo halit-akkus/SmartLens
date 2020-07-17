@@ -1,87 +1,56 @@
 ﻿using SmartLens.Business.Abstract.Listener;
 using System;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading.Tasks;
 
 public class AsyncTcpServer : IDisposable,IListener
 {
-    public class DataReceivedEventArgs : EventArgs
+    private static TcpListener _listener;
+    private static AsyncTcpServer _asyncTcpServer;
+    public static AsyncTcpServer currentTcpServer(int port)
     {
-        public NetworkStream Stream { get; private set; }
-
-        public DataReceivedEventArgs(NetworkStream stream)
+        if (_asyncTcpServer == null)
         {
-            Stream = stream;
+            _asyncTcpServer = new AsyncTcpServer();
+           _listener = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
+            _listener.Start();
         }
+        return _asyncTcpServer;
     }
-
-    public event EventHandler<DataReceivedEventArgs> OnDataReceived;
-
-    public AsyncTcpServer(IPAddress address, int port)
-    {
-        _listener = new TcpListener(address, port);
-    }
-
-    
-
-    public void Stop()
-    {
-        _isListening = false;
-        _listener.Stop();
-    }
-
     public void Dispose()
     {
-        Stop();
+        _listener = null;
     }
-
-    private IAsyncResult WaitForClientConnection()
-    {
-      var checkAsyncResult =   _listener.BeginAcceptTcpClient(HandleClientConnection, _listener);
-
-        return checkAsyncResult;
-    }
-
-    private void HandleClientConnection(IAsyncResult result)
-    {
-        if (!_isListening)
-        {
-            return;
-        }
-
-        var server = result.AsyncState as TcpListener;
-        var client = _listener.EndAcceptTcpClient(result);
-
-      var checkAsyncResult =  WaitForClientConnection();
-
-        OnDataReceived?.Invoke(this, new DataReceivedEventArgs(client.GetStream()));
-    }
-
-    public Task<byte[]> StartListener()
-    {
-        throw new NotImplementedException();
-    }
-
     public string Message()
     {
-        return "Waiting for broadcast/ UDP";
+        return "Waiting for TCP";
     }
 
-    //public Task<byte[]> StartListener()
-    //{
-    //    _listener.Start();
-    //    _isListening = true;
+    public async Task<byte[]> StartListener()
+    {
+        try
+        {
+            var receiveResult = await _listener.AcceptTcpClientAsync();
+            var myNetworkStream = receiveResult.GetStream();
+
+            if (myNetworkStream.CanRead)
+            {
+                byte[] myReadBuffer = new byte[2];
+                myNetworkStream.Read(myReadBuffer, 0, myReadBuffer.Length);
+                return myReadBuffer;
+            }
+        }
+        catch (SocketException e)
+        {
+            Console.WriteLine(e);
+        }
+        return new byte[] { };
+    }
 
 
-    //  Task<IAsyncResult>.Run(()=> {
-    //      var checkAsyncResult = WaitForClientConnection();
-
-    //  });
 
 
-    //}
-
-    private readonly TcpListener _listener;
-    private volatile bool _isListening = false;
 }
