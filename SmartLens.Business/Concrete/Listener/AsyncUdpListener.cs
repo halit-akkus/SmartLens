@@ -13,15 +13,16 @@ namespace SmartLens.Business.Concrete.Listener
         private static UdpClient _listener { get; set; }
         private static IPEndPoint _groupEP { get; set; }
         private static AsyncUdpListener _asyncUdpServer;
-     
-        public static AsyncUdpListener currentUdpServer(UdpClient udpClient, IPEndPoint ıPEndPoint)
+        private static int _port;
+
+        public static AsyncUdpListener currentUdpServer(object obj)
         {
             if (_asyncUdpServer ==null)
             {
                 _asyncUdpServer = new AsyncUdpListener();
             }
-            _listener = udpClient;
-            _groupEP = ıPEndPoint;
+            _port = (int)obj;
+            _groupEP = new IPEndPoint(IPAddress.Any, _port);
             return _asyncUdpServer;
         }
         public static void newUdpClient(UdpClient udpClient)
@@ -32,7 +33,9 @@ namespace SmartLens.Business.Concrete.Listener
         {
             try
             {
+                _listener = new UdpClient(_port);
                 var receiveResult = await _listener.ReceiveAsync();
+               
                 _listener.Close();
                 return receiveResult.Buffer;
             }
@@ -49,7 +52,7 @@ namespace SmartLens.Business.Concrete.Listener
 
         public string Message()
         {
-            return "Waiting for broadcast/ UDP";
+            return "Waiting for UDP";
         }
 
         public void Dispose()
