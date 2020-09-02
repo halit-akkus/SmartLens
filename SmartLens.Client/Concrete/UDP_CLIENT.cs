@@ -29,6 +29,10 @@ namespace SmartLens.Client
         {
                 if (!(buffer.Length > 65505))
                   _Socket.SendTo(buffer, _Ep);
+
+           //var aa =  new byte[2560];
+           //var result = _Socket.Receive(aa);
+           // Console.WriteLine($"code:{result}");
         }
 
        

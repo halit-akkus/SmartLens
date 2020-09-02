@@ -1,0 +1,16 @@
+E:\GIT\SmartLens\SmartLens.Listener\obj\Debug\SmartLens.Listener.csprojAssemblyReference.cache
+E:\GIT\SmartLens\SmartLens.Listener\obj\Debug\SmartLens.Listener.csproj.CoreCompileInputs.cache
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Listener.dll.config
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Listener.dll
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Listener.pdb
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\log4net.dll
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\Newtonsoft.Json.dll
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\log4net.xml
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\Newtonsoft.Json.xml
+E:\GIT\SmartLens\SmartLens.Listener\obj\Debug\SmartLens.Listener.csproj.CopyComplete
+E:\GIT\SmartLens\SmartLens.Listener\obj\Debug\SmartLens.Listener.dll
+E:\GIT\SmartLens\SmartLens.Listener\obj\Debug\SmartLens.Listener.pdb
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Entities.dll
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Core.dll
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Entities.pdb
+E:\GIT\SmartLens\SmartLens.Listener\bin\Debug\SmartLens.Core.pdb

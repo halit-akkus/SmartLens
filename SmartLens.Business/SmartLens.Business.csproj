@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SuperWebSocketNETServer" Version="0.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SmartLens.DataAccess\SmartLens.DataAccess.csproj" />
     <ProjectReference Include="..\SmartLens.Entities\SmartLens.Entities.csproj" />
   </ItemGroup>

@@ -12,6 +12,7 @@ namespace SmartLens.Transmission
         public ConsoleEffect()
         {
             Console.WindowHeight = (Console.LargestWindowHeight * 9 / 10);
+           
         }
         public static void SetColor(ConsoleColor fore)
         {

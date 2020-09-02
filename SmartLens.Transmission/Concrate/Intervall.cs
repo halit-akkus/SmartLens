@@ -1,7 +1,10 @@
-﻿using SmartLens.WinFormUI;
+﻿using SmartLens.Entities.Results;
+using SmartLens.Transmission.Services;
+using SmartLens.WinFormUI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Numerics;
 using System.Text;
 using System.Timers;
@@ -54,20 +57,29 @@ namespace SmartLens.Transmission.Concrate
         }
         public int DownloadSize(int currentDownload)
         {
-            return _DownloadSize+currentDownload;
+            _DownloadSize += currentDownload;
+            return _DownloadSize;
         }
-        public void GetImage(Image ımage, string size)
+
+        public void GetImage(Image ımage, int size, Guid userId)
         {
-          _form1.GetImage(ımage,size
+          _form1.SetStatistics(userId.ToString(),"127.0.0.1", ımage,size.ToString()
                 , (++RequestCount).ToString());
         }
 
-        public void SetIntervall(Image img,string size,int currentdownload)
+        public void SetIntervall(IResult result)
         {
-            GetImage(img, size);
-            DownloadSize(currentdownload);
+            var streamData = ResultParse.GetImage(result);
+            Guid userId = ResultParse.GetUserId(result);
+
+            var image = Image.FromStream(new MemoryStream(streamData.Image));
+
+            int size = result.receiveData.Length / 1024;
+           
+            GetImage(image,size,userId);
+            DownloadSize(size);
             SetFps();
-            Console.WriteLine($" OK => Received : {size}KB");
+            Console.WriteLine($" OK : {size}KB");
         }
     }
 }

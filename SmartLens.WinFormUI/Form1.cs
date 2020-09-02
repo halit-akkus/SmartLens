@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,12 +21,29 @@ namespace SmartLens.WinFormUI
             InitializeComponent();
         }
 
+        private static string _title = "SmartLens";
         static int height { get; set; }
-        static string total { get; set; }
-
+        private static string total { get; set; }
+        private string[] _loadingBar = { ".","..","...","."," .","  .","   ."};
+        private int _loadingCount = 0;
         public void GetFps(string fps,string downloadsize)
         {
             Img.GetFps(fps);
+            string sgnlText = "No Signal!";
+            if (!(int.Parse(fps)==0))
+                sgnlText = $"proccessing {_loadingBar[_loadingCount++]}";
+            if (_loadingCount >= _loadingBar.Length)
+                _loadingCount = 0;
+            if (sgnl.InvokeRequired)
+            {
+                Action action = delegate {
+                    sgnl.Text = sgnlText;
+                };
+                sgnl.Invoke(action);
+            }
+            else
+                label1.Text = sgnlText;
+
             fps += " hz";
             if (label1.InvokeRequired)
             {
@@ -36,7 +54,6 @@ namespace SmartLens.WinFormUI
             }
             else
                 label1.Text = fps;
-
           
             if (int.Parse(downloadsize) > 1024)
                 downloadsize = Math.Round((Convert.ToDouble( downloadsize) / 1024), 2) + " mb/s";
@@ -50,10 +67,9 @@ namespace SmartLens.WinFormUI
             }
             else
                 label10.Text = downloadsize;
-
         }
        
-        public void GetImage(Image ımage,string size,string step)
+        public void SetStatistics(string userId,string FromIpAddress, Image ımage,string size,string step)
         {
             step = "#" + step;
              Img.GetImage(ımage, size);
@@ -93,6 +109,24 @@ namespace SmartLens.WinFormUI
             }
             else
                 label8.Text = step;
+            if (label12.InvokeRequired)
+            {
+                Action action = delegate {
+                    label12.Text = userId;
+                };
+                label12.Invoke(action);
+            }
+            else
+                label12.Text = userId;
+            if (label14.InvokeRequired)
+            {
+                Action action = delegate {
+                    label14.Text = FromIpAddress;
+                };
+                label14.Invoke(action);
+            }
+            else
+                label14.Text = FromIpAddress;
         }
 
 
@@ -121,10 +155,11 @@ namespace SmartLens.WinFormUI
         private void Form1_Load(object sender, EventArgs e)
         {
             notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-            notifyIcon1.BalloonTipText = "Server Started";
+            notifyIcon1.BalloonTipText = "Server is Started";
             notifyIcon1.BalloonTipTitle = "Smart Lens";
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(30000);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -140,6 +175,23 @@ namespace SmartLens.WinFormUI
         {
             Img.Show();
         }
-       
+        private int lastChar = 0;
+        private void logoTimer_Tick(object sender, EventArgs e)
+        {
+            var charArray = _title.ToCharArray();
+            _title = "";
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                if (i == lastChar||i==0|| i == 5)
+                    _title += charArray[i].ToString().ToUpper();
+                else _title += charArray[i].ToString().ToLower();
+            }
+            
+            if (lastChar++ >= charArray.Length)
+                lastChar = 0;
+
+
+            label15.Text = _title;
+        }
     }
 }

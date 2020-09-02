@@ -1,49 +1,50 @@
-﻿using SmartLens.Business.Abstract.Listener;
-using SmartLens.Business.Concrete.Listener;
+﻿using Newtonsoft.Json;
+using SmartLens.Business.Abstract;
+using SmartLens.Entities.Concrate;
+using SmartLens.Entities.Results;
+using SmartLens.Listener.Abstract;
+using SmartLens.Transmission.Services;
 using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Drawing;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace SmartLens.Transmission.Concrate
 {
-   public static class Server
+    public  class Server
     {
-        
-        [STAThread]
-        public static async Task<Image> GetImageAsync(IListener Listener)
+        private IImageDetectedManager _detectedManager;
+        public Server(IImageDetectedManager imageDetectedManager)
         {
-            byte[] bytes = await Listener.StartListener();
-
-            return Image.FromStream(new MemoryStream(bytes));
+            _detectedManager = imageDetectedManager;
         }
-
-       public static async void ServerStarted(int _port,IListener listener)
+       
+        public  async void ServerStarted(IListener listener)
         {
-            
-            Console.WriteLine("Started Server[PORT NO:{0}]", _port);
-            Console.WriteLine("-----------------------------");
-
-            
             var intervall = Intervall.Get();
 
             new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect)).Start(listener.Message().Length);
-           
+
             while (true)
             {
                 Console.WriteLine();
-                ConsoleEffect.SetColor();
+               
                 Console.Write($"{ listener.Message()} =>");
                 /*------------------------------------------*/
-                var checkImg = await GetImageAsync(listener);
+                var result = await listener.Listen();
                 /*------------------------------------------*/
-                var size = ((int)2048 / 1024).ToString();
-                intervall.SetIntervall(checkImg, size, int.Parse(size));
+               
+                var checkResult = _detectedManager.ResultValidator(result);
+            
+                if (checkResult.IsSuccess)
+                {
+                    intervall.SetIntervall(result);
+
+                    await  _detectedManager.SendResult(result);
+                }
             }
         }
     }

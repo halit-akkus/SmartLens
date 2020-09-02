@@ -50,10 +50,6 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "SuperWebSocketNETServer": {
-              "target": "Package",
-              "version": "[0.8.0, )"
             }
           },
           "imports": [
@@ -66,7 +62,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -125,7 +121,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -179,6 +175,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
@@ -191,7 +191,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -250,8 +250,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "E:\\GIT\\SmartLens\\SmartLens.Listener\\SmartLens.Listener.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\GIT\\SmartLens\\SmartLens.Listener\\SmartLens.Listener.csproj",
+        "projectName": "SmartLens.Listener",
+        "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Listener\\SmartLens.Listener.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\GIT\\SmartLens\\SmartLens.Entities\\SmartLens.Entities.csproj": {
+                "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Entities\\SmartLens.Entities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     },
     "E:\\GIT\\SmartLens\\SmartLens.Transmission\\SmartLens.Transmission.csproj": {
@@ -280,6 +299,12 @@
               "E:\\GIT\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj": {
                 "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Business\\SmartLens.Business.csproj"
               },
+              "E:\\GIT\\SmartLens\\SmartLens.Entities\\SmartLens.Entities.csproj": {
+                "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Entities\\SmartLens.Entities.csproj"
+              },
+              "E:\\GIT\\SmartLens\\SmartLens.Listener\\SmartLens.Listener.csproj": {
+                "projectPath": "E:\\GIT\\SmartLens\\SmartLens.Listener\\SmartLens.Listener.csproj"
+              },
               "E:\\GIT\\SmartLens\\SmartLens.WinFormUI\\SmartLens.WinFormUI.csproj": {
                 "projectPath": "E:\\GIT\\SmartLens\\SmartLens.WinFormUI\\SmartLens.WinFormUI.csproj"
               }
@@ -295,6 +320,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[4.7.0, )"
@@ -310,12 +339,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -324,7 +347,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -371,12 +394,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -385,7 +402,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

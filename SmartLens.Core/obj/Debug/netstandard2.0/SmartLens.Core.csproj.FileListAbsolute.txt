@@ -1,9 +1,9 @@
 E:\GIT\SmartLens\SmartLens.Core\bin\Debug\netstandard2.0\SmartLens.Core.deps.json
 E:\GIT\SmartLens\SmartLens.Core\bin\Debug\netstandard2.0\SmartLens.Core.dll
-E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.csprojAssemblyReference.cache
 E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.AssemblyInfoInputs.cache
 E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.AssemblyInfo.cs
 E:\GIT\SmartLens\SmartLens.Core\bin\Debug\netstandard2.0\SmartLens.Core.pdb
 E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.csproj.CoreCompileInputs.cache
 E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.dll
 E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.pdb
+E:\GIT\SmartLens\SmartLens.Core\obj\Debug\netstandard2.0\SmartLens.Core.csprojAssemblyReference.cache

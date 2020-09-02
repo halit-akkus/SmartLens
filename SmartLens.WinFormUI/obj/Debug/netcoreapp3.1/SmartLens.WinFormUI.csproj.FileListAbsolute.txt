@@ -14,3 +14,4 @@ E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI
 E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.pdb
 E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.genruntimeconfig.cache
 E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.ImgShow.resources
+E:\GIT\SmartLens\SmartLens.WinFormUI\obj\Debug\netcoreapp3.1\SmartLens.WinFormUI.Properties.Resources.resources

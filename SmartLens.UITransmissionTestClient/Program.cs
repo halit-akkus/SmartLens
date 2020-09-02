@@ -1,5 +1,7 @@
 ﻿
+using Newtonsoft.Json;
 using SmartLens.Client;
+using SmartLens.Entities.Concrate;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -14,7 +16,6 @@ namespace SmartLens.UITransmissionTestClient
 {
     class Program
     {
-       
         static  private Image Screenshot(int x, int y)
         {
             var Screenshot = new Bitmap(500,500);
@@ -35,20 +36,20 @@ namespace SmartLens.UITransmissionTestClient
        
         static void Main(string[] args)
         {
-            
             var _client = new UDP_CLIENT("127.0.0.1", 11000);
-
-            
-            Console.WriteLine("Started");
-
             var  nrd = new Random();
-            int x = nrd.Next(0,800);
-            int y = nrd.Next(0, 100);
-
+            int x = nrd.Next(100,800);
+            int y = nrd.Next(100, 500);
             while (true)
             {
-                _client.SendBuffer(ImageToByte(Screenshot(x,y)));
-                Thread.Sleep(1);
+                var stream = new StreamData
+                {
+                    Image = ImageToByte(Screenshot(x, y)),
+                    UserId = Guid.NewGuid()
+                };
+                var serialize = JsonConvert.SerializeObject(stream);
+                byte[] bytes = Encoding.ASCII.GetBytes(serialize);
+                _client.SendBuffer(bytes);
             }
         }
     }

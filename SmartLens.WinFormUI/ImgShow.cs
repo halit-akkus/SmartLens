@@ -18,7 +18,7 @@ namespace SmartLens.WinFormUI
         public void GetFps(string fps)
         {
           
-            fps = fps == "0" ? "NO SIGNAL!" :fps+ " FPS";
+            fps = fps == "0" ? "NO SIGNAL!" : $"{fps} FPS";
             if (label1.InvokeRequired)
             {
                 Action action = delegate

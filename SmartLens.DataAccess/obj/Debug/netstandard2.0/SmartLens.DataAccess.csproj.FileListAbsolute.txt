@@ -8,7 +8,7 @@ E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.DataAcc
 E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.DataAccess.pdb
 E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Core.pdb
 E:\GIT\SmartLens\SmartLens.DataAccess\bin\Debug\netstandard2.0\SmartLens.Entities.pdb
-E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csproj.CoreCompileInputs.cache
 E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csproj.CopyComplete
 E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.dll
 E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.pdb
+E:\GIT\SmartLens\SmartLens.DataAccess\obj\Debug\netstandard2.0\SmartLens.DataAccess.csproj.CoreCompileInputs.cache
