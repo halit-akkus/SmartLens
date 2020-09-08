@@ -9,10 +9,12 @@ namespace SmartLens.DataAccess.Services.Api
     public class PythonImageDetectedService : IImageDetectedService
     {
         private IClient _client;
+        private const int _port = 1254;
          PythonImageDetectedService(IClient client)
         {
             _client = client;
         }
+        //business layerden gelen veriler buradan python servisine iletilecek.
         public Task SendResult(IResult result)
         {
             return Task.Run(()=> {
@@ -20,9 +22,10 @@ namespace SmartLens.DataAccess.Services.Api
             });
         }
 
+        //python tarafından gelen veriler buraya düşecek.
         public async Task<IResult> ReceiveResult(IListener listener)
         {
-            var checkResult = await listener.Listen();
+            var checkResult = await listener.Listen(_port);
 
             return checkResult;
         }

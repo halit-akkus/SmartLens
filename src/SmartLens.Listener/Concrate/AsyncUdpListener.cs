@@ -50,12 +50,25 @@ namespace SmartLens.Listener.Concrate
 
                 return result;
             }
-            catch (SocketException e)
+            catch (SocketException e)  { return null;  }
+        }
+
+        public async Task<IResult> Listen(int port)
+        {
+            try
             {
-                Console.WriteLine(e);
+                _listener = new UdpClient(port);
+                var receiveResult = await _listener.ReceiveAsync();
+
+                _listener.Close();
+                var result = new Result
+                {
+                    receiveData = receiveResult.Buffer,
+                };
+
+                return result;
             }
-           
-            return null;
+            catch (SocketException e) { return null; }
         }
 
         public void Dispose()

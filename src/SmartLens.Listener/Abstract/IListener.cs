@@ -9,6 +9,7 @@ namespace SmartLens.Listener.Abstract
 {
     public interface IListener
     {
+        Task<IResult> Listen(int port);
         Task<IResult> Listen();
         string Message();
     }

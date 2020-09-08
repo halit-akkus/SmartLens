@@ -26,7 +26,7 @@ namespace SmartLens.Client
         public Task SendData(IResult result)
         {
             return Task.Run(()=> {
-                var serialize = JsonConvert.SerializeObject(result);
+                var serialize = JsonConvert.SerializeObject(result.receiveData);
                 byte[] bytes = Encoding.ASCII.GetBytes(serialize);
                 
                 _Socket.SendTo(bytes, _Ep);
