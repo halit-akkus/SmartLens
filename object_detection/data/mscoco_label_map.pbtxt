@@ -1,7 +1,7 @@
 item {
   name: "/m/01g317"
   id: 1
-  display_name: "person"
+  display_name: "İnsan"
 }
 item {
   name: "/m/0199g"
@@ -11,7 +11,7 @@ item {
 item {
   name: "/m/0k4j"
   id: 3
-  display_name: "car"
+  display_name: "Araba"
 }
 item {
   name: "/m/04_sv"
@@ -26,7 +26,7 @@ item {
 item {
   name: "/m/01bjv"
   id: 6
-  display_name: "bus"
+  display_name: "Otobüs"
 }
 item {
   name: "/m/07jdr"
@@ -36,7 +36,7 @@ item {
 item {
   name: "/m/07r04"
   id: 8
-  display_name: "truck"
+  display_name: "Tır"
 }
 item {
   name: "/m/019jd"
@@ -46,7 +46,7 @@ item {
 item {
   name: "/m/015qff"
   id: 10
-  display_name: "traffic light"
+  display_name: "Trafik ışığı"
 }
 item {
   name: "/m/01pns0"
@@ -71,22 +71,22 @@ item {
 item {
   name: "/m/015p6"
   id: 16
-  display_name: "bird"
+  display_name: "Kuş"
 }
 item {
   name: "/m/01yrx"
   id: 17
-  display_name: "cat"
+  display_name: "Kedi"
 }
 item {
   name: "/m/0bt9lr"
   id: 18
-  display_name: "dog"
+  display_name: "Köpek"
 }
 item {
   name: "/m/03k3r"
   id: 19
-  display_name: "horse"
+  display_name: "At"
 }
 item {
   name: "/m/07bgp"
@@ -236,7 +236,7 @@ item {
 item {
   name: "/m/014j1m"
   id: 53
-  display_name: "apple"
+  display_name: "Elma"
 }
 item {
   name: "/m/0l515"
@@ -246,7 +246,7 @@ item {
 item {
   name: "/m/0cyhj_"
   id: 55
-  display_name: "orange"
+  display_name: "Portakal"
 }
 item {
   name: "/m/0hkxq"
@@ -331,12 +331,12 @@ item {
 item {
   name: "/m/01m2v"
   id: 76
-  display_name: "keyboard"
+  display_name: "Klavye"
 }
 item {
   name: "/m/050k8"
   id: 77
-  display_name: "cell phone"
+  display_name: "Cep telefonu"
 }
 item {
   name: "/m/0fx9l"
@@ -366,12 +366,12 @@ item {
 item {
   name: "/m/0bt_c3"
   id: 84
-  display_name: "book"
+  display_name: "Kitap"
 }
 item {
   name: "/m/01x3z"
   id: 85
-  display_name: "clock"
+  display_name: "Saat"
 }
 item {
   name: "/m/02s195"

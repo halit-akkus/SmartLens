@@ -11,16 +11,16 @@
 
 import numpy as np
 import os
-import six.moves.urllib as urllib
+
 import sys
-import tarfile
+
 import tensorflow as tf
-import zipfile
-from collections import defaultdict
-from io import StringIO
+
+
+
 from matplotlib import pyplot as plt
 from PIL import Image
-import matplotlib.pyplot as plt
+
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
 from object_detection.utils import ops as utils_ops
@@ -57,7 +57,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # What model to download.
 MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
 MODEL_FILE = MODEL_NAME + '.tar.gz'
-DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
+
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -195,7 +195,8 @@ for image_path in TEST_IMAGE_PATHS:
       use_normalized_coordinates=True,
       line_thickness=8)
   plt.figure(figsize=IMAGE_SIZE)
+  print(output_dict['detection_classes'][0])
   plt.imshow(image_np)
-  plt.title("..")
+  
   #İşlem sonunda sonuçlanmış görüntünün çıktı dizine atılması.
   plt.savefig("Output_image\\"+image_path)
