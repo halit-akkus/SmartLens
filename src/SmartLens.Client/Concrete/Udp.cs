@@ -10,29 +10,20 @@ namespace SmartLens.Client
 {
     public class Udp : IClient
     {
-        public int _Port { get; set; }
-        public IPAddress _Broadcast { get; set; }
-        public Socket _Socket { get; set; }
-        public IPEndPoint _Ep { get; set; }
-
-        public Udp(int port)
+        private UdpClient _udpClient;
+        public Udp()
         {
-            _Port = port;
-            _Broadcast = IPAddress.Parse("127.0.0.1");
-            _Socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            _Ep = new IPEndPoint(_Broadcast, _Port);
+            _udpClient = new UdpClient();
         }
 
-        public Task SendData(IResult result)
+        public Task SendData(IPEndPoint ipEndPoint,byte[] data)
         {
-            return Task.Run(()=> {
-                var serialize = JsonConvert.SerializeObject(result.receiveData);
-                byte[] bytes = Encoding.ASCII.GetBytes(serialize);
-                
-                _Socket.SendTo(bytes, _Ep);
-            });
+               return Task.Run(() =>
+              {
+                  _udpClient.SendAsync(data,data.Length,ipEndPoint);
+              });
         }
 
-     
+
     }
 }

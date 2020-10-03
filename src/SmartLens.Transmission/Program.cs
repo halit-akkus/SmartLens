@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Autofac;
+using Microsoft.Extensions.DependencyInjection;
 using SmartLens.Business.Abstract;
 using SmartLens.Business.Concrete;
 using SmartLens.Client;
@@ -26,8 +27,9 @@ namespace SmartLens.Transmission
        
         static void Main(string[] args)
         {
-
             var serviceProvider = ContainerConfiguration.Configure();
+            _client = serviceProvider.Resolve<IResponseClient>();
+            _server = serviceProvider.Resolve<IServer>();
 
             int port = args.Length > 0 && args.Length<65536? int.Parse(args[0]) : 11000;
             string protocol = args.Length > 1 ? args[1] : "Udp";
@@ -39,21 +41,24 @@ namespace SmartLens.Transmission
             Console.WriteLine($"Port Number =>{port}");
 
             IListener listener = new ServerFactory(port).CreateListener(protocol);
-            IClient client = new ClientFactory(port).CreateClient(protocol);
 
 
             var startListener = new Thread(delegate ()
             {
                 _server.ServerStarted(listener);
             });
-
-            var startClient = new Thread(delegate ()
-            {
-                _client.ServerStarted(listener);
-            });
-
             startListener.Start();
-            startClient.Start();
+
+            
+            IClient client = new ClientFactory(port).CreateClient(protocol);
+             
+              var startClient = new Thread(delegate ()
+             {
+                 _client.ServerStarted(listener);
+             });
+             //startClient.Start();
+             
+
 
             AllocConsole();
             Application.EnableVisualStyles();

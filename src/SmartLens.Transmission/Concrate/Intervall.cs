@@ -1,14 +1,10 @@
 ﻿using SmartLens.Entities.Results;
-using SmartLens.Transmission.Services;
 using SmartLens.WinFormUI;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
-using System.Text;
 using System.Timers;
-using System.Windows.Forms;
 
 namespace SmartLens.Transmission.Concrate
 {
@@ -67,14 +63,13 @@ namespace SmartLens.Transmission.Concrate
                 , (++RequestCount).ToString());
         }
 
-        public void SetIntervall(IResult result)
+        public void SetIntervall(Entities.Results.Stream stream)
         {
-            var streamData = ResultParse.GetImage(result);
-            Guid userId = ResultParse.GetUserId(result);
+            Guid userId = stream.UserId;
 
-            var image = Image.FromStream(new MemoryStream(streamData.Image));
+            var image = Image.FromStream(new MemoryStream(stream.Image));
 
-            int size = result.receiveData.Length / 1024;
+            int size = stream.Image.Length / 1024;
            
             GetImage(image,size,userId);
             DownloadSize(size);

@@ -1,4 +1,5 @@
-﻿using SmartLens.Entities.Results;
+﻿using SmartLens.Entities.Models.Result;
+using SmartLens.Entities.Results;
 using SmartLens.Listener.Abstract;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,8 @@ namespace SmartLens.Listener.Concrate
 {
     public class AsyncUdpListener : IListener, IDisposable
     {
-        private static UdpClient _listener { get; set; }
-        private static IPEndPoint _groupEP { get; set; }
+        private static UdpClient _listener;
+
         private static AsyncUdpListener _asyncUdpServer;
         private static int _port;
 
@@ -31,11 +32,11 @@ namespace SmartLens.Listener.Concrate
                 }
             }
             _port = (int)obj;
-            _groupEP = new IPEndPoint(IPAddress.Any, _port);
+
             return _asyncUdpServer;
         }
 
-        public async Task<IResult> Listen()
+        public async Task<Result> Listen()
         {
             try
             {
@@ -45,7 +46,8 @@ namespace SmartLens.Listener.Concrate
                 _listener.Close();
                 var result = new Result
                 {
-                    receiveData = receiveResult.Buffer,
+                    ReceiveData = receiveResult.Buffer,
+                    IPEndPoint = receiveResult.RemoteEndPoint
                 };
 
                 return result;
@@ -53,7 +55,7 @@ namespace SmartLens.Listener.Concrate
             catch (SocketException e)  { return null;  }
         }
 
-        public async Task<IResult> Listen(int port)
+        public async Task<byte[]> Listen(int port)
         {
             try
             {
@@ -61,12 +63,8 @@ namespace SmartLens.Listener.Concrate
                 var receiveResult = await _listener.ReceiveAsync();
 
                 _listener.Close();
-                var result = new Result
-                {
-                    receiveData = receiveResult.Buffer,
-                };
-
-                return result;
+             
+                return receiveResult.Buffer;
             }
             catch (SocketException e) { return null; }
         }

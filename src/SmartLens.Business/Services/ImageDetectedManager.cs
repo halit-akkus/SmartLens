@@ -1,11 +1,12 @@
-﻿using SmartLens.Business.Abstract;
-using SmartLens.Business.Validator;
+﻿using SmartLens.Business.Validator;
 using SmartLens.DataAccess.Services.Api;
+using SmartLens.Entities.Models;
 using SmartLens.Entities.Results;
 using SmartLens.Listener.Abstract;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartLens.Business.Concrete
+namespace SmartLens.Business.Services
 {
     public class ImageDetectedManager : IImageDetectedManager
     {
@@ -15,7 +16,7 @@ namespace SmartLens.Business.Concrete
             _imageDetectedService = imageDetectedService;
         }
 
-        public IImageResult ResultValidator(IResult result)
+        public IImageResult ResultValidator(Stream result)
         {
             if (result==null)
             {
@@ -26,22 +27,31 @@ namespace SmartLens.Business.Concrete
 
             return new SuccessResult();
         }
-        public Task SendResult(IResult result)
+        public Task SendResult(Stream stream)
         {
-            return _imageDetectedService.SendResult(result);
+            var getStreamToString = ResultParse<Stream>.jsonSerialize(stream);
+
+            var getBytes = Encoding.ASCII.GetBytes(getStreamToString);
+            return _imageDetectedService.SendResult(getBytes);
         }
 
-        public async Task<IDataResult<IResult>> ReceiveResult(IListener listen)
+        public async Task<IDataResult<ResponseStream>> ReceiveResult(IListener listen)
         {
-            var checkReceive = await _imageDetectedService.ReceiveResult(listen);
-            if (listen == null)
-            {
-                var errorDataResult = new ErrorDataResult<IResult>();
-                errorDataResult.AddMessage("InvalidParameters", "Nesnenin örneği oluşturulmamış.");
-                return errorDataResult;
-            }
+            
+              var checkReceive = await _imageDetectedService.ReceiveResult(listen);
 
-            return new SuccessDataResult<IResult>(checkReceive);
+             if (listen == null)
+             {
+                 var errorDataResult = new ErrorDataResult<ResponseStream>();
+                 errorDataResult.AddMessage("InvalidParameters", "Nesnenin örneği oluşturulmamış.");
+                 return errorDataResult;
+             }
+
+
+            var stream = ResultParse<ResponseStream>.jsonDeserialize(checkReceive);
+            
+             return new SuccessDataResult<ResponseStream>(stream);
+             
         }
     }
 }

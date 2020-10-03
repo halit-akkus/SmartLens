@@ -1,4 +1,5 @@
-﻿using SmartLens.Entities.Results;
+﻿using SmartLens.Entities.Models.Result;
+using SmartLens.Entities.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace SmartLens.Listener.Abstract
 {
     public interface IListener
     {
-        Task<IResult> Listen(int port);
-        Task<IResult> Listen();
+        Task<byte[]> Listen(int port);
+        Task<Result> Listen();
         string Message();
     }
 }

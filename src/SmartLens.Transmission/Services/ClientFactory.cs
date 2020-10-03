@@ -11,7 +11,7 @@ namespace SmartLens.Transmission.Services
         public ClientFactory(int port)
         {
             _client = new Dictionary<string, Func<IClient>>();
-            _client["Udp"] = () => { return new Udp(port); };
+            _client["Udp"] = () => { return new Udp(); };
         }
         public IClient CreateClient(string protocolType)
         {

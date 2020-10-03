@@ -4,6 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SmartLens.Business.Abstract;
 using SmartLens.Business.Concrete;
+using SmartLens.Business.Services;
+using SmartLens.Client;
+using SmartLens.DataAccess.Services.Api;
 using SmartLens.Listener.Abstract;
 using SmartLens.Listener.Concrate;
 using SmartLens.Transmission.Abstract;
@@ -16,7 +19,7 @@ namespace SmartLens.Transmission.DependencyModules.Autofac
 {
     static class ContainerConfiguration
     {
-        public static IServiceProvider Configure()
+        public static IContainer Configure()
         {
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddLogging(l => l.AddConsole())
@@ -29,9 +32,11 @@ namespace SmartLens.Transmission.DependencyModules.Autofac
             containerBuilder.RegisterType<Server>().As<IServer>().SingleInstance();
             containerBuilder.RegisterType<ResponseClient>().As<IResponseClient>().SingleInstance();
             containerBuilder.RegisterType<AsyncUdpListener>().As<IListener>().SingleInstance();
+            containerBuilder.RegisterType<ImageDetectedManager>().As<IImageDetectedManager>().SingleInstance();
+            containerBuilder.RegisterType<PythonImageDetectedService>().As<IImageDetectedService>().SingleInstance();
+            containerBuilder.RegisterType<Client.Udp>().As<IClient>().SingleInstance();
 
-            var container = containerBuilder.Build();
-            return new AutofacServiceProvider(container);
+            return containerBuilder.Build();
         }
     }
 }

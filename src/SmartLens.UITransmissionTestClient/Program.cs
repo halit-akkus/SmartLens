@@ -35,11 +35,11 @@ namespace SmartLens.UITransmissionTestClient
        
         static void Main(string[] args)
         {
-            var _client = new Udp(11000);
+            var _client = new Udp();
             var  nrd = new Random();
             int x = nrd.Next(100,800);
             int y = nrd.Next(100, 500);
-            while (true)
+              while (true)
             {
                 var stream = new StreamData
                 {
@@ -52,6 +52,7 @@ namespace SmartLens.UITransmissionTestClient
                 byte[] bytes = Encoding.ASCII.GetBytes(serialize);
 
                 result.receiveData = bytes;
+                _client.SetPort(11000);
                 _client.SendData(result);
             }
         }

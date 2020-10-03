@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartLens.Entities.Concrate
+namespace SmartLens.Entities.Results
 {
-    public class StreamData
+    public class Stream
     {
         public Guid UserId { get; set; }
-        public byte[] Image { get; set; }
+        public  byte[] Image { get; set; }
     }
 }
