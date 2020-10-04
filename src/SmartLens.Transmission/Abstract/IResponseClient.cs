@@ -7,6 +7,6 @@ namespace SmartLens.Transmission.Abstract
 {
     public interface IResponseClient
     {
-        void ServerStarted(IListener listener);
+        void ServerStarted(IListener listener,int port);
     }
 }

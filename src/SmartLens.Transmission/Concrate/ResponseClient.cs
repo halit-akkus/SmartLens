@@ -2,50 +2,53 @@
 using SmartLens.Client;
 using SmartLens.Listener.Abstract;
 using SmartLens.Transmission.Abstract;
+using SmartLens.Transmission.ClientEndPoint;
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using System.Threading;
 
 namespace SmartLens.Transmission.Concrate
 {
-     public class ResponseClient:IResponseClient
+    public class ResponseClient : IResponseClient
     {
         private IImageDetectedManager _detectedManager;
         private IClient _client;
-        public ResponseClient(IImageDetectedManager imageDetectedManager, IClient client)
+        private IClientEp _clientEp;
+        public ResponseClient(IClientEp clientEp, IImageDetectedManager imageDetectedManager, IClient client)
         {
+            _clientEp = clientEp;
             _detectedManager = imageDetectedManager;
             _client = client;
         }
 
-        public async void ServerStarted(IListener listener)
+        public async void ServerStarted(IListener listener, int port)
         {
-            
-               while (true)
-              {
-                  var result = await _detectedManager.ReceiveResult(listener);
 
-                  if (!result.IsSuccess)
-                  {
-                      foreach (var error in result.Messages)
-                      {
-                          Console.WriteLine($"Client Error=>:{error.Key} / Desc:{error.Message} ");
-                      }
-                      continue;
-                  }
+            while (true)
+            {
+                var result = await _detectedManager.ReceiveResult(listener, port);
 
-                  Console.WriteLine($"gelen veri=> X");
-
-                var ep = new IPEndPoint(IPAddress.Parse(""),1111);
-
+                if (!result.IsSuccess)
+                {
+                    foreach (var error in result.Messages)
+                    {
+                        Console.WriteLine($"Client Error=>:{error.Key} / Desc:{error.Message} ");
+                    }
+                    continue;
+                }
 
                 var getBytes = Encoding.ASCII.GetBytes(result.Data.ImageIndexNumber.ToString());
 
-                  await  _client.SendData(ep,getBytes);
-              }
-             
+                var getClient = _clientEp.GetClientByUserId(result.Data.UserId);
+                if (getClient != null)
+                {
+                    await _client.SendData(getClient.IpEndPoint, getBytes);
+
+                    _clientEp.RemoveClientByUserId(result.Data.UserId);
+                }
+
+            }
+
         }
 
     }
