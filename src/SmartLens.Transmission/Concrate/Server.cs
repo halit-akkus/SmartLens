@@ -3,6 +3,7 @@ using SmartLens.Entities.Results;
 using SmartLens.Listener.Abstract;
 using SmartLens.Transmission.Abstract;
 using SmartLens.Transmission.ClientEndPoint;
+using SmartLens.Transmission.Tdo;
 using System;
 using System.Threading;
 
@@ -47,7 +48,13 @@ namespace SmartLens.Transmission.Concrate
                 
                 _clientEp.AddClient(stream.UserId,result.IPEndPoint);
 
-                intervall.SetIntervall(stream);
+                var statistics = new StatisticsModel
+                {
+                    Stream = stream,
+                    IPEndPoint = result.IPEndPoint
+                };
+
+                intervall.SetIntervall(statistics);
 
                 await _detectedManager.SendResult(stream);
             }

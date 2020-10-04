@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -69,7 +70,7 @@ namespace SmartLens.WinFormUI
                 label10.Text = downloadsize;
         }
        
-        public void SetStatistics(string userId,string FromIpAddress, Image ımage,string size,string step)
+        public void SetStatistics(string userId,IPEndPoint FromIpAddress, Image ımage,string size,string step)
         {
             step = "#" + step;
              Img.GetImage(ımage, size);
@@ -118,15 +119,15 @@ namespace SmartLens.WinFormUI
             }
             else
                 label12.Text = userId;
-            if (label14.InvokeRequired)
+            if (label17.InvokeRequired)
             {
                 Action action = delegate {
-                    label14.Text = FromIpAddress;
+                    label17.Text =$"{FromIpAddress.Address.ToString()}:{FromIpAddress.Port}";
                 };
-                label14.Invoke(action);
+                label17.Invoke(action);
             }
             else
-                label14.Text = FromIpAddress;
+                label17.Text = $"{FromIpAddress.Address.ToString()}:{FromIpAddress.Port}";
         }
 
 

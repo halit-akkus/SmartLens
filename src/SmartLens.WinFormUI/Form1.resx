@@ -1311,7 +1311,7 @@
     <value>1</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 386</value>
+    <value>12, 336</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>245, 41</value>
@@ -1331,92 +1331,11 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label13.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="label13.Font" type="System.Drawing.Font, System.Drawing.Common">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 10</value>
-  </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>127, 21</value>
-  </data>
-  <data name="label13.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>From Ip Address:</value>
-  </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
-  </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label14.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="label14.Font" type="System.Drawing.Font, System.Drawing.Common">
-    <value>Segoe UI, 11.25pt, style=Italic</value>
-  </data>
-  <data name="label14.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>127, 11</value>
-  </data>
-  <data name="label14.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>15, 20</value>
-  </data>
-  <data name="label14.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;label14.Name" xml:space="preserve">
-    <value>label14</value>
-  </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 330</value>
-  </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>245, 41</value>
-  </data>
-  <data name="panel7.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="sgnl.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
   <data name="sgnl.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 526</value>
+    <value>6, 550</value>
   </data>
   <data name="sgnl.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>0, 15</value>
@@ -1434,7 +1353,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;sgnl.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1443,7 +1362,7 @@
     <value>SimSun, 20.25pt, style=Italic</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>62, 461</value>
+    <value>56, 485</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>0, 27</value>
@@ -1461,6 +1380,87 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label16.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>57, -1</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>119, 21</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Last IpEndPoint:</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label17.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Calibri, 12pt, style=Italic</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>17, 26</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>16, 19</value>
+  </data>
+  <data name="label17.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 393</value>
+  </data>
+  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>245, 56</value>
+  </data>
+  <data name="panel8.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
@@ -1473,7 +1473,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>273, 550</value>
+    <value>273, 596</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

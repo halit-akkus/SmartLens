@@ -1,8 +1,10 @@
 ﻿using SmartLens.Entities.Results;
+using SmartLens.Transmission.Tdo;
 using SmartLens.WinFormUI;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Numerics;
 using System.Timers;
 
@@ -57,21 +59,22 @@ namespace SmartLens.Transmission.Concrate
             return _DownloadSize;
         }
 
-        public void GetImage(Image ımage, int size, Guid userId)
+        public void GetImage(Image ımage, int size, Guid userId,IPEndPoint iPEndPoint)
         {
-          _form1.SetStatistics(userId.ToString(),"127.0.0.1", ımage,size.ToString()
+          _form1.SetStatistics(userId.ToString(),iPEndPoint, ımage,size.ToString()
                 , (++RequestCount).ToString());
         }
 
-        public void SetIntervall(Entities.Results.Stream stream)
+        public void SetIntervall(StatisticsModel statistics)
         {
-            Guid userId = stream.UserId;
+            Guid userId = statistics.Stream.UserId;
 
-            var image = Image.FromStream(new MemoryStream(stream.Image));
+            var image = Image.FromStream(new MemoryStream(statistics.Stream.Image));
 
-            int size = stream.Image.Length / 1024;
+            int size = statistics.Stream.Image.Length / 1024;
            
-            GetImage(image,size,userId);
+
+            GetImage(image,size,userId , statistics.IPEndPoint);
             DownloadSize(size);
             SetFps();
             Console.WriteLine($" OK : {size}KB");
