@@ -1,13 +1,10 @@
 ﻿using Autofac;
-using Microsoft.Extensions.DependencyInjection;
-using SmartLens.Business.Abstract;
-using SmartLens.Business.Concrete;
-using SmartLens.Client;
+using Newtonsoft.Json;
 using SmartLens.Listener.Abstract;
 using SmartLens.Transmission.Abstract;
 using SmartLens.Transmission.Concrate;
 using SmartLens.Transmission.DependencyModules.Autofac;
-using SmartLens.Transmission.Services;
+using SmartLens.Transmission.Tdo;
 using SmartLens.WinFormUI;
 using System;
 using System.Runtime.InteropServices;
@@ -20,6 +17,7 @@ namespace SmartLens.Transmission
     {
         private static IServer _server;
         private static IResponseClient _client;
+        private static ISettings _settings;
     
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -27,12 +25,21 @@ namespace SmartLens.Transmission
        
         static void Main(string[] args)
         {
+
             var serviceProvider = ContainerConfiguration.Configure();
+
             _client = serviceProvider.Resolve<IResponseClient>();
             _server = serviceProvider.Resolve<IServer>();
+            _settings = serviceProvider.Resolve<ISettings>();
 
-            int port = args.Length > 0 && args.Length<65536? int.Parse(args[0]) : 11000;
-            string protocol = args.Length > 1 ? args[1] : "Udp";
+            var getJson = _settings.getJson();
+            Console.WriteLine($"Settings: {getJson.Result}");
+             _settings = JsonConvert.DeserializeObject<Settings>(getJson.Result);
+
+
+            int port = args.Length>0 ? int.Parse(args[0]) : _settings.frontServerPort;
+
+            string protocol = args.Length > 1 ? args[1] : _settings.defaultProtocol;
 
             Console.WriteLine("Server => Running :)");
             Console.WriteLine("-------------------");
@@ -50,13 +57,12 @@ namespace SmartLens.Transmission
             startListener.Start();
 
             
-            IClient client = new ClientFactory(port).CreateClient(protocol);
              
               var startClient = new Thread(delegate ()
              {
-                 _client.ServerStarted(listener);
+                 _client.ServerStarted(listener,_settings.serviceServerPort);
              });
-             //startClient.Start();
+             startClient.Start();
              
 
 

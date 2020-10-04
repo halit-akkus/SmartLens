@@ -1,8 +1,8 @@
 ﻿using SmartLens.Business.Services;
-using SmartLens.Entities.Models.Result;
 using SmartLens.Entities.Results;
 using SmartLens.Listener.Abstract;
 using SmartLens.Transmission.Abstract;
+using SmartLens.Transmission.ClientEndPoint;
 using System;
 using System.Threading;
 
@@ -11,19 +11,20 @@ namespace SmartLens.Transmission.Concrate
     public  class Server:IServer
     {
         private IImageDetectedManager _detectedManager;
+        private IClientEp _clientEp;
         
-        public Server(IImageDetectedManager imageDetectedManager)
+        public Server(IImageDetectedManager imageDetectedManager,IClientEp clientEp)
         {
             _detectedManager = imageDetectedManager;
+            _clientEp = clientEp;
         }
 
         public  async void ServerStarted(IListener listener)
         {
             var intervall = Intervall.Get();
 
-            new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect)).Start(listener.Message().Length);
-
-
+            new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect)).Start(listener.Message().Length); 
+            
             while (true)
             {
                 Console.WriteLine();
@@ -43,10 +44,10 @@ namespace SmartLens.Transmission.Concrate
                     }
                     continue;
                 }
-                //remoteendPoint buradan gönderilecek..
+                
+                _clientEp.AddClient(stream.UserId,result.IPEndPoint);
 
                 intervall.SetIntervall(stream);
-
 
                 await _detectedManager.SendResult(stream);
             }

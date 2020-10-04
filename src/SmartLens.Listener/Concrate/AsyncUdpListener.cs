@@ -13,7 +13,8 @@ namespace SmartLens.Listener.Concrate
 {
     public class AsyncUdpListener : IListener, IDisposable
     {
-        private static UdpClient _listener;
+        private static UdpClient _frontlistener;
+        private static UdpClient _serviceListener;
 
         private static AsyncUdpListener _asyncUdpServer;
         private static int _port;
@@ -40,10 +41,10 @@ namespace SmartLens.Listener.Concrate
         {
             try
             {
-                _listener = new UdpClient(_port);
-                var receiveResult = await _listener.ReceiveAsync();
-                
-                _listener.Close();
+                _frontlistener = new UdpClient(_port);
+                var receiveResult = await _frontlistener.ReceiveAsync();
+
+                _frontlistener.Close();
                 var result = new Result
                 {
                     ReceiveData = receiveResult.Buffer,
@@ -59,10 +60,10 @@ namespace SmartLens.Listener.Concrate
         {
             try
             {
-                _listener = new UdpClient(port);
-                var receiveResult = await _listener.ReceiveAsync();
+                _serviceListener = new UdpClient(port);
+                var receiveResult = await _serviceListener.ReceiveAsync();
 
-                _listener.Close();
+                _serviceListener.Close();
              
                 return receiveResult.Buffer;
             }
@@ -71,7 +72,8 @@ namespace SmartLens.Listener.Concrate
 
         public void Dispose()
         {
-            _listener = null;
+            _serviceListener = null;
+            _frontlistener = null;
         }
 
         public string Message()

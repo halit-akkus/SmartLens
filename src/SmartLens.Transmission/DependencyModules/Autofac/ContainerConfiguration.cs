@@ -10,7 +10,9 @@ using SmartLens.DataAccess.Services.Api;
 using SmartLens.Listener.Abstract;
 using SmartLens.Listener.Concrate;
 using SmartLens.Transmission.Abstract;
+using SmartLens.Transmission.ClientEndPoint;
 using SmartLens.Transmission.Concrate;
+using SmartLens.Transmission.Tdo;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -34,7 +36,9 @@ namespace SmartLens.Transmission.DependencyModules.Autofac
             containerBuilder.RegisterType<AsyncUdpListener>().As<IListener>().SingleInstance();
             containerBuilder.RegisterType<ImageDetectedManager>().As<IImageDetectedManager>().SingleInstance();
             containerBuilder.RegisterType<PythonImageDetectedService>().As<IImageDetectedService>().SingleInstance();
-            containerBuilder.RegisterType<Client.Udp>().As<IClient>().SingleInstance();
+            containerBuilder.RegisterType<Udp>().As<IClient>().SingleInstance();
+            containerBuilder.RegisterType<ClientEp>().As<IClientEp>().SingleInstance();
+            containerBuilder.RegisterType<Settings>().As<ISettings>().SingleInstance();
 
             return containerBuilder.Build();
         }
