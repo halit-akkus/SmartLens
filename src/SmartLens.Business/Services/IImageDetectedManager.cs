@@ -11,6 +11,6 @@ namespace SmartLens.Business.Services
     {
         IImageResult ResultValidator(Stream stream);
         Task SendResult(Stream stream);
-        Task<IDataResult<ResponseStream>> ReceiveResult(IListener listen);
+        Task<IDataResult<ResponseStream>> ReceiveResult(IListener listen,int port);
     }
 }

@@ -1,5 +1,4 @@
 ﻿using SmartLens.Client;
-using SmartLens.Entities.Results;
 using SmartLens.Listener.Abstract;
 using System.Net;
 using System.Threading.Tasks;
@@ -24,10 +23,10 @@ namespace SmartLens.DataAccess.Services.Api
         }
 
         //python tarafından gelen veriler buraya düşecek.
-        public async Task<byte[]> ReceiveResult(IListener listener)
+        public async Task<byte[]> ReceiveResult(IListener listener,int port)
         {
-            var checkResult = await listener.Listen(_port);
-
+            var checkResult = await listener.Listen(port);
+            
             return checkResult;
         }
     }

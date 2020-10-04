@@ -35,18 +35,22 @@ namespace SmartLens.Business.Services
             return _imageDetectedService.SendResult(getBytes);
         }
 
-        public async Task<IDataResult<ResponseStream>> ReceiveResult(IListener listen)
+        public async Task<IDataResult<ResponseStream>> ReceiveResult(IListener listen,int port)
         {
             
-              var checkReceive = await _imageDetectedService.ReceiveResult(listen);
+              var checkReceive = await _imageDetectedService.ReceiveResult(listen, port);
 
+             var errorDataResult = new ErrorDataResult<ResponseStream>();
              if (listen == null)
              {
-                 var errorDataResult = new ErrorDataResult<ResponseStream>();
                  errorDataResult.AddMessage("InvalidParameters", "Nesnenin örneği oluşturulmamış.");
                  return errorDataResult;
              }
-
+            if (checkReceive.Length==0)
+            {
+                errorDataResult.AddMessage("InvalidLength","Geçersiz veri.");
+                return errorDataResult;
+            }
 
             var stream = ResultParse<ResponseStream>.jsonDeserialize(checkReceive);
             

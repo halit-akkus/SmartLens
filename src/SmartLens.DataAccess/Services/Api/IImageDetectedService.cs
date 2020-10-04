@@ -7,6 +7,6 @@ namespace SmartLens.DataAccess.Services.Api
     public interface IImageDetectedService
     {
         Task SendResult(byte[] data);
-        Task<byte[]> ReceiveResult(IListener listener);
+        Task<byte[]> ReceiveResult(IListener listener,int port);
     }
 }
