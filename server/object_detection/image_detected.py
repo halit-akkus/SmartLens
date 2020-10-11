@@ -8,15 +8,11 @@ from matplotlib import pyplot as plt
 from PIL import Image
 import base64
 import io
-from array import array
-import matplotlib.image as mpimg
-
 
 sys.path.append("..")
 from object_detection.utils import ops as utils_ops
 from utils import label_map_util
 from utils import visualization_utils as vis_util
-
 
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -48,7 +44,6 @@ category_index = label_map_util.create_category_index(categories)
 
 
 
-
 def load_image_into_numpy_array(image):
   (im_width, im_height) = image.size
   return np.array(image.getdata()).reshape(
@@ -56,26 +51,6 @@ def load_image_into_numpy_array(image):
 
 
 
-fileName = "test_images"
-
-def parse(path):
-    dirList=os.listdir(path)
-    dirList.sort()
-
-    fnames = []
-
-    for fname in dirList:
-        
-        if os.path.isfile(path + fname):
-            fnames.append(fname)
-
-    return fnames
-
-(files) = parse(fileName+"//")
-
-    
-PATH_TO_TEST_IMAGES_DIR = fileName
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, item) for item in files ]
 
 
 IMAGE_SIZE = (12, 8)
@@ -151,9 +126,9 @@ while True:
   print ("Receive: " + result.UserId)
   image = base64.b64decode(result.Image)
   image = io.BytesIO(image)
-  image = mpimg.imread(image, format='JPG')
-  plt.imshow(image)
-  image_np = load_image_into_numpy_array(image)
+  image_detected = Image.open(image)
+  print(image_detected)
+  image_np = load_image_into_numpy_array(image_detected)
   image_np_expanded = np.expand_dims(image_np, axis=0)
   output_dict = run_inference_for_single_image(image_np, detection_graph)
   vis_util.visualize_boxes_and_labels_on_image_array(
@@ -166,8 +141,14 @@ while True:
       use_normalized_coordinates=True,
       line_thickness=8)
   plt.figure(figsize=IMAGE_SIZE)
-  print(output_dict['detection_classes'][0])
   plt.imshow(image_np)
+  plt.savefig("Output_image\\"+result.UserId)
+  output = output_dict['detection_classes'][0]
+  print(output)
+  stream = StreamData(result.UserId,int(output))
+  json_str = json.dumps(stream.__dict__)
+  serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
   
   
-  plt.savefig("Output_image\\"+image_path)
+  
+  
