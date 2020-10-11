@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartLens.UITransmissionTestClient", "SmartLens.UITransmissionTestClient.csproj", "{158B427C-7FC0-44DB-8CE8-DB4D7C573630}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158B427C-7FC0-44DB-8CE8-DB4D7C573630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158B427C-7FC0-44DB-8CE8-DB4D7C573630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158B427C-7FC0-44DB-8CE8-DB4D7C573630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158B427C-7FC0-44DB-8CE8-DB4D7C573630}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEEF3677-2018-471B-ABA2-D0DE2EC97224}
+	EndGlobalSection
+EndGlobal
