@@ -58,7 +58,6 @@ IMAGE_SIZE = (12, 8)
 
 def run_inference_for_single_image(image, graph):
   with graph.as_default():
-    with tf.Session() as sess:
       
       ops = tf.get_default_graph().get_operations()
       all_tensor_names = {output.name for op in ops for output in op.outputs}
@@ -118,8 +117,8 @@ UDP_PORT_NO = 1254
 
 serverSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
-
-while True:
+with tf.Session(graph=detection_graph) as sess:
+ while True:
   print('Receive image:')
   data, addr = serverSock.recvfrom(999999)
   result = Result(data.decode())
@@ -142,9 +141,8 @@ while True:
       line_thickness=8)
   plt.figure(figsize=IMAGE_SIZE)
   plt.imshow(image_np)
-  plt.savefig("Output_image\\"+result.UserId)
+  #plt.savefig("Output_image\\"+result.UserId)
   output = output_dict['detection_classes'][0]
-  print(output)
   stream = StreamData(result.UserId,int(output))
   json_str = json.dumps(stream.__dict__)
   serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
