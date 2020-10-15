@@ -5,29 +5,24 @@ import os
 import sys
 import tensorflow as tf
 from matplotlib import pyplot as plt
-from PIL import Image
 import base64
 import io
-
 sys.path.append("..")
 from object_detection.utils import ops as utils_ops
 from utils import label_map_util
 from utils import visualization_utils as vis_util
-
+import threading
+import tkinter
+from PIL import ImageTk, Image 
+import time
+root = tkinter.Tk()
+root.geometry('500x500')
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
-
 MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
-
-
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
-
-
 PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
-
 NUM_CLASSES = 90
-
 
 detection_graph = tf.Graph()
 with detection_graph.as_default():
@@ -37,26 +32,19 @@ with detection_graph.as_default():
     od_graph_def.ParseFromString(serialized_graph)
     tf.import_graph_def(od_graph_def, name='')
 
-
 label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
 categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=NUM_CLASSES, use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
-
-
 
 def load_image_into_numpy_array(image):
   (im_width, im_height) = image.size
   return np.array(image.getdata()).reshape(
       (im_height, im_width, 3)).astype(np.uint8)
 
-
-
-
-
 IMAGE_SIZE = (12, 8)
 
 
-def run_inference_for_single_image(image, graph):
+def run_inference_for_single_image(image, graph,sess):
   with graph.as_default():
       
       ops = tf.get_default_graph().get_operations()
@@ -117,36 +105,45 @@ UDP_PORT_NO = 1254
 
 serverSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
-with tf.Session(graph=detection_graph) as sess:
- while True:
-  print('Receive image:')
-  data, addr = serverSock.recvfrom(999999)
-  result = Result(data.decode())
-  print ("Receive: " + result.UserId)
-  image = base64.b64decode(result.Image)
-  image = io.BytesIO(image)
-  image_detected = Image.open(image)
-  print(image_detected)
-  image_np = load_image_into_numpy_array(image_detected)
-  image_np_expanded = np.expand_dims(image_np, axis=0)
-  output_dict = run_inference_for_single_image(image_np, detection_graph)
-  vis_util.visualize_boxes_and_labels_on_image_array(
-      image_np,
-      output_dict['detection_boxes'],
-      output_dict['detection_classes'],
-      output_dict['detection_scores'],
-      category_index,
-      instance_masks=output_dict.get('detection_masks'),
-      use_normalized_coordinates=True,
-      line_thickness=8)
-  plt.figure(figsize=IMAGE_SIZE)
-  plt.imshow(image_np)
-  #plt.savefig("Output_image\\"+result.UserId)
-  output = output_dict['detection_classes'][0]
-  stream = StreamData(result.UserId,int(output))
-  json_str = json.dumps(stream.__dict__)
-  serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
+
+def get_started_image_detected():
+  with tf.Session(graph=detection_graph) as sess:
+   while True:
+    print('Receive image:')
+    data, addr = serverSock.recvfrom(999999)
+    result = Result(data.decode())
+    print ("Receive: " + result.UserId)
+    image = base64.b64decode(result.Image)
+    image = io.BytesIO(image)
+    image_detected = Image.open(image)
+    print(image_detected)
+    image_np = load_image_into_numpy_array(image_detected)
+    image_np_expanded = np.expand_dims(image_np, axis=0)
+    output_dict = run_inference_for_single_image(image_np, detection_graph,sess)
+    vis_util.visualize_boxes_and_labels_on_image_array(
+       image_np,
+       output_dict['detection_boxes'],
+       output_dict['detection_classes'],
+       output_dict['detection_scores'],
+       category_index,
+       instance_masks=output_dict.get('detection_masks'),
+       use_normalized_coordinates=True,
+       line_thickness=8)
+    output_image = ImageTk.PhotoImage(Image.fromarray(image_np))
+    tkinter.Label(root, image = output_image).place(x = 0, y = 0)
+    output = output_dict['detection_classes'][0]
+    stream = StreamData(result.UserId,int(output))
+    json_str = json.dumps(stream.__dict__)
+    serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
+
+
+threading.Thread(target=get_started_image_detected).start()
+root.mainloop()
+
+
+
   
+
   
   
   
