@@ -21,7 +21,10 @@ namespace SmartLens.UITransmissionTestClient
         {
               var serialize = JsonConvert.SerializeObject(stream);
               byte[] bytes = Encoding.ASCII.GetBytes(serialize);
-
+            if (bytes.Length>64900)
+            {
+                return new byte[] { };
+            }
               await  _udpClient.SendAsync(bytes, bytes.Length, _iPEndPoint);
 
               var receive = await _udpClient.ReceiveAsync();

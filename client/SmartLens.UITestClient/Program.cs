@@ -24,7 +24,7 @@ namespace SmartLens.UITransmissionTestClient
 
         static async void client()
         {
-            var ep = new IPEndPoint(IPAddress.Parse("192.168.1.106"), 11000);
+            var ep = new IPEndPoint(IPAddress.Parse("192.168.1.110"), 11000);
 
             IClient _client = new Udp(ep);
             IPaintingProcess Process = new PaintingProcess();
@@ -37,6 +37,7 @@ namespace SmartLens.UITransmissionTestClient
                     UserId = Guid.NewGuid()
                 };
                 Console.Write("İmage:");
+
                 var result =  _client.SendData(stream);
               
 
