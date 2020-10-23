@@ -92,9 +92,9 @@ def run_inference_for_single_image(image, graph,sess):
 
 # In[11]:
 class StreamData(object):
-    def __init__(self,UserId,ImageIndexNumber):
+    def __init__(self,UserId,Detectionlist):
          self.UserId=UserId
-         self.ImageIndexNumber=ImageIndexNumber
+         self.Detectionlist=Detectionlist
  
 class Result(object):
     def __init__(self, data):
@@ -105,6 +105,7 @@ UDP_PORT_NO = 1254
 
 serverSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
+
 
 def get_started_image_detected():
   with tf.Session(graph=detection_graph) as sess:
@@ -131,8 +132,16 @@ def get_started_image_detected():
        line_thickness=8)
     output_image = ImageTk.PhotoImage(Image.fromarray(image_np))
     tkinter.Label(root, image = output_image).place(x = 0, y = 0)
-    output = output_dict['detection_classes'][0]
-    stream = StreamData(result.UserId,int(output))
+    detection_scores = []
+    detection_classes = []
+    for key in  output_dict['detection_scores']:
+        if key <= 0.5: break
+        if key > 0.5:
+            detection_scores.append(key)
+    for key in range(len(detection_scores)):
+        detection_classes.append(str(output_dict['detection_classes'][key]))
+    print(detection_classes)
+    stream = StreamData(result.UserId,detection_classes)
     json_str = json.dumps(stream.__dict__)
     serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
 
