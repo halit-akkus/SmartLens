@@ -37,7 +37,13 @@ namespace SmartLens.Transmission.Concrate
                     continue;
                 }
 
-                var getBytes = Encoding.ASCII.GetBytes(result.Data.ImageIndexNumber.ToString());
+                
+                var sb = new StringBuilder();
+                foreach (var item in result.Data.DetectionList)
+                {
+                    sb.Append($" {item}");
+                }
+                var getBytes = Encoding.ASCII.GetBytes(sb.ToString());
 
                 var getClient = _clientEp.GetClientByUserId(result.Data.UserId);
                 if (getClient != null)
