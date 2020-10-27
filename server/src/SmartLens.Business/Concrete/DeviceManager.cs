@@ -18,7 +18,6 @@ namespace SmartLens.Business.Concrete
         public void Add(Device device)
         {
             _deviceDal.Add(device);
-
         }
 
         public void Delete(Device DeviceId)
@@ -33,7 +32,6 @@ namespace SmartLens.Business.Concrete
 
         public Device GetById(string DeviceId)
         {
-
             return _deviceDal.Get(p=>p.Id==DeviceId);
         }
 

@@ -1,32 +1,32 @@
 item {
   name: "/m/01g317"
   id: 1
-  display_name: "İnsan"
+  display_name: "insan"
 }
 item {
   name: "/m/0199g"
   id: 2
-  display_name: "bicycle"
+  display_name: "bisiklet"
 }
 item {
   name: "/m/0k4j"
   id: 3
-  display_name: "Araba"
+  display_name: "araba"
 }
 item {
   name: "/m/04_sv"
   id: 4
-  display_name: "motorcycle"
+  display_name: "motosiklet"
 }
 item {
   name: "/m/05czz6l"
   id: 5
-  display_name: "airplane"
+  display_name: "uçak"
 }
 item {
   name: "/m/01bjv"
   id: 6
-  display_name: "Otobüs"
+  display_name: "otobüs"
 }
 item {
   name: "/m/07jdr"
@@ -36,77 +36,77 @@ item {
 item {
   name: "/m/07r04"
   id: 8
-  display_name: "Tır"
+  display_name: "tır"
 }
 item {
   name: "/m/019jd"
   id: 9
-  display_name: "boat"
+  display_name: "tekne"
 }
 item {
   name: "/m/015qff"
   id: 10
-  display_name: "Trafik ışığı"
+  display_name: "trafik ışığı"
 }
 item {
   name: "/m/01pns0"
   id: 11
-  display_name: "fire hydrant"
+  display_name: "yangın musluğu"
 }
 item {
   name: "/m/02pv19"
   id: 13
-  display_name: "stop sign"
+  display_name: "dur işareti"
 }
 item {
   name: "/m/015qbp"
   id: 14
-  display_name: "parking meter"
+  display_name: "parkmetre"
 }
 item {
   name: "/m/0cvnqh"
   id: 15
-  display_name: "bench"
+  display_name: "bank"
 }
 item {
   name: "/m/015p6"
   id: 16
-  display_name: "Kuş"
+  display_name: "kuş"
 }
 item {
   name: "/m/01yrx"
   id: 17
-  display_name: "Kedi"
+  display_name: "kedi"
 }
 item {
   name: "/m/0bt9lr"
   id: 18
-  display_name: "Köpek"
+  display_name: "köpek"
 }
 item {
   name: "/m/03k3r"
   id: 19
-  display_name: "At"
+  display_name: "at"
 }
 item {
   name: "/m/07bgp"
   id: 20
-  display_name: "sheep"
+  display_name: "koyun"
 }
 item {
   name: "/m/01xq0k1"
   id: 21
-  display_name: "cow"
+  display_name: "inek"
 }
 item {
   name: "/m/0bwd_0j"
   id: 22
-  display_name: "elephant"
+  display_name: "fill"
 }
 item {
   name: "/m/01dws"
   id: 23
-  display_name: "bear"
+  display_name: "ayı"
 }
 item {
   name: "/m/0898b"
@@ -116,152 +116,152 @@ item {
 item {
   name: "/m/03bk1"
   id: 25
-  display_name: "giraffe"
+  display_name: "zürafa"
 }
 item {
   name: "/m/01940j"
   id: 27
-  display_name: "backpack"
+  display_name: "sırt çantası"
 }
 item {
   name: "/m/0hnnb"
   id: 28
-  display_name: "umbrella"
+  display_name: "şemsiye"
 }
 item {
   name: "/m/080hkjn"
   id: 31
-  display_name: "handbag"
+  display_name: "el çantası"
 }
 item {
   name: "/m/01rkbr"
   id: 32
-  display_name: "tie"
+  display_name: "kravat"
 }
 item {
   name: "/m/01s55n"
   id: 33
-  display_name: "suitcase"
+  display_name: "bavul"
 }
 item {
   name: "/m/02wmf"
   id: 34
-  display_name: "frisbee"
+  display_name: "frizbi"
 }
 item {
   name: "/m/071p9"
   id: 35
-  display_name: "skis"
+  display_name: "kayaklar"
 }
 item {
   name: "/m/06__v"
   id: 36
-  display_name: "snowboard"
+  display_name: "kar tahtası"
 }
 item {
   name: "/m/018xm"
   id: 37
-  display_name: "sports ball"
+  display_name: "spor topu"
 }
 item {
   name: "/m/02zt3"
   id: 38
-  display_name: "kite"
+  display_name: "uçurtma"
 }
 item {
   name: "/m/03g8mr"
   id: 39
-  display_name: "baseball bat"
+  display_name: "beyzbol sopası"
 }
 item {
   name: "/m/03grzl"
   id: 40
-  display_name: "baseball glove"
+  display_name: "beyzbol eldiveni"
 }
 item {
   name: "/m/06_fw"
   id: 41
-  display_name: "skateboard"
+  display_name: "kaykay"
 }
 item {
   name: "/m/019w40"
   id: 42
-  display_name: "surfboard"
+  display_name: "sörf tahtası"
 }
 item {
   name: "/m/0dv9c"
   id: 43
-  display_name: "tennis racket"
+  display_name: "tenis raketi"
 }
 item {
   name: "/m/04dr76w"
   id: 44
-  display_name: "bottle"
+  display_name: "şişe"
 }
 item {
   name: "/m/09tvcd"
   id: 46
-  display_name: "wine glass"
+  display_name: "şarap bardağı"
 }
 item {
   name: "/m/08gqpm"
   id: 47
-  display_name: "cup"
+  display_name: "fincan"
 }
 item {
   name: "/m/0dt3t"
   id: 48
-  display_name: "fork"
+  display_name: "çatal"
 }
 item {
   name: "/m/04ctx"
   id: 49
-  display_name: "knife"
+  display_name: "bıçak"
 }
 item {
   name: "/m/0cmx8"
   id: 50
-  display_name: "spoon"
+  display_name: "kaşık"
 }
 item {
   name: "/m/04kkgm"
   id: 51
-  display_name: "bowl"
+  display_name: "çanak"
 }
 item {
   name: "/m/09qck"
   id: 52
-  display_name: "banana"
+  display_name: "muz"
 }
 item {
   name: "/m/014j1m"
   id: 53
-  display_name: "Elma"
+  display_name: "elma"
 }
 item {
   name: "/m/0l515"
   id: 54
-  display_name: "sandwich"
+  display_name: "sandviç"
 }
 item {
   name: "/m/0cyhj_"
   id: 55
-  display_name: "Portakal"
+  display_name: "portakal"
 }
 item {
   name: "/m/0hkxq"
   id: 56
-  display_name: "broccoli"
+  display_name: "brokoli"
 }
 item {
   name: "/m/0fj52s"
   id: 57
-  display_name: "carrot"
+  display_name: "havuç"
 }
 item {
   name: "/m/01b9xk"
   id: 58
-  display_name: "hot dog"
+  display_name: "sosisli"
 }
 item {
   name: "/m/0663v"
@@ -271,47 +271,47 @@ item {
 item {
   name: "/m/0jy4k"
   id: 60
-  display_name: "donut"
+  display_name: "tatlı çörek"
 }
 item {
   name: "/m/0fszt"
   id: 61
-  display_name: "cake"
+  display_name: "kek"
 }
 item {
   name: "/m/01mzpv"
   id: 62
-  display_name: "chair"
+  display_name: "sandalye"
 }
 item {
   name: "/m/02crq1"
   id: 63
-  display_name: "couch"
+  display_name: "kanepe"
 }
 item {
   name: "/m/03fp41"
   id: 64
-  display_name: "potted plant"
+  display_name: "saksı bitkisi"
 }
 item {
   name: "/m/03ssj5"
   id: 65
-  display_name: "bed"
+  display_name: "yatak"
 }
 item {
   name: "/m/04bcr3"
   id: 67
-  display_name: "dining table"
+  display_name: "yemek masası"
 }
 item {
   name: "/m/09g1w"
   id: 70
-  display_name: "toilet"
+  display_name: "tuvalet"
 }
 item {
   name: "/m/07c52"
   id: 72
-  display_name: "tv"
+  display_name: "görüntü/tv"
 }
 item {
   name: "/m/01c648"
@@ -321,17 +321,17 @@ item {
 item {
   name: "/m/020lf"
   id: 74
-  display_name: "mouse"
+  display_name: "fare"
 }
 item {
   name: "/m/0qjjc"
   id: 75
-  display_name: "remote"
+  display_name: "uzak"
 }
 item {
   name: "/m/01m2v"
   id: 76
-  display_name: "Klavye"
+  display_name: "klavye"
 }
 item {
   name: "/m/050k8"
@@ -341,60 +341,60 @@ item {
 item {
   name: "/m/0fx9l"
   id: 78
-  display_name: "microwave"
+  display_name: "mikrodalga"
 }
 item {
   name: "/m/029bxz"
   id: 79
-  display_name: "oven"
+  display_name: "fırın"
 }
 item {
   name: "/m/01k6s3"
   id: 80
-  display_name: "toaster"
+  display_name: "tost makinası"
 }
 item {
   name: "/m/0130jx"
   id: 81
-  display_name: "sink"
+  display_name: "lavabo"
 }
 item {
   name: "/m/040b_t"
   id: 82
-  display_name: "refrigerator"
+  display_name: "buzdolabı"
 }
 item {
   name: "/m/0bt_c3"
   id: 84
-  display_name: "Kitap"
+  display_name: "kitap"
 }
 item {
   name: "/m/01x3z"
   id: 85
-  display_name: "Saat"
+  display_name: "saat"
 }
 item {
   name: "/m/02s195"
   id: 86
-  display_name: "vase"
+  display_name: "vazo"
 }
 item {
   name: "/m/01lsmm"
   id: 87
-  display_name: "scissors"
+  display_name: "makas"
 }
 item {
   name: "/m/0kmg4"
   id: 88
-  display_name: "teddy bear"
+  display_name: "oyuncak ayı"
 }
 item {
   name: "/m/03wvsk"
   id: 89
-  display_name: "hair drier"
+  display_name: "saç kurutma makinesi"
 }
 item {
   name: "/m/012xff"
   id: 90
-  display_name: "toothbrush"
+  display_name: "diş fırçası"
 }
