@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SmartLens.Business.Validator
 {
-    class SuccessDataResult<T>:IDataResult<T>
+    class SuccessDataResult<T> : IDataResult<T>
     {
         public T Data { get; set; }
         public bool IsSuccess { get; set; }
