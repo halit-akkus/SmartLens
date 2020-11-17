@@ -1,0 +1,7 @@
+
+  {
+    "frontServerPort": 11000,
+    "serviceServerPort": 1200,
+    "defaultProtocol": "Udp"
+  }
+

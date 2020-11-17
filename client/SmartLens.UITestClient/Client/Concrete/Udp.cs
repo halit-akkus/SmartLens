@@ -27,9 +27,9 @@ namespace SmartLens.UITransmissionTestClient
             }
               await  _udpClient.SendAsync(bytes, bytes.Length, _iPEndPoint);
 
-              var receive = await _udpClient.ReceiveAsync();
+            //  var receive = await _udpClient.ReceiveAsync();
              
-            return receive.Buffer;
+            return new byte[] { };
         }
 
 
