@@ -16,7 +16,7 @@ import tkinter
 from PIL import ImageTk, Image 
 import time
 root = tkinter.Tk()
-root.geometry('500x500')
+root.geometry('450x430')
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'

@@ -37,9 +37,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(-6, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-9, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(492, 464);
+            this.pictureBox1.Size = new System.Drawing.Size(450, 430);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -47,11 +47,11 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Navy;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(97, 195);
+            this.label1.Location = new System.Drawing.Point(81, 181);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 67);
+            this.label1.Size = new System.Drawing.Size(281, 62);
             this.label1.TabIndex = 5;
             this.label1.Text = "NO SIGNAL!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(439, 421);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;

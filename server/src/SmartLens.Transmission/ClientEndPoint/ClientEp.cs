@@ -8,7 +8,7 @@ namespace SmartLens.Transmission.ClientEndPoint
 {
     class ClientEp : IClientEp
     {
-      
+
         public IList<ClientModel> ClientList { get; set; }
         public void AddClient(Guid UserId, IPEndPoint iPEndPoint)
         {
@@ -16,23 +16,21 @@ namespace SmartLens.Transmission.ClientEndPoint
             {
                 ClientList = new List<ClientModel>();
             }
-               ClientList.Add(new ClientModel(UserId, iPEndPoint));
+            ClientList.Add(new ClientModel(UserId, iPEndPoint));
         }
 
         public ClientModel GetClientByUserId(Guid UserId)
         {
-          var client =  ClientList.FirstOrDefault(client => client.UserId == UserId);
-         
+            var client = ClientList.ToList().FirstOrDefault(client => client.UserId == UserId);
+
             return client;
         }
 
         public void RemoveClientByUserId(Guid UserId)
         {
-          var client =  ClientList.FirstOrDefault(client => client.UserId == UserId);
-            if (client!=null)
-            {
-                ClientList.Remove(client);
-            }
+            var client = ClientList.ToList().FirstOrDefault(client => client.UserId == UserId);
+
+            ClientList.ToList().Remove(client);
         }
     }
 }

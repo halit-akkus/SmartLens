@@ -20,10 +20,10 @@ namespace SmartLens.UITransmissionTestClient.Client.Concrete
 
         public Image Screenshot(int x, int y)
         {
-            var Screenshot = new Bitmap(500, 500);
+            var Screenshot = new Bitmap(450, 430);
             Graphics GFX = Graphics.FromImage(Screenshot);
             var nrd = new Random();
-            GFX.CopyFromScreen(0, x, y, 0, new Size(500, 500));
+            GFX.CopyFromScreen(0, x, y, 0, new Size(450, 430));
 
             return Screenshot;
         }  

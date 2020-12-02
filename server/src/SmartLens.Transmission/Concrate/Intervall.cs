@@ -61,6 +61,7 @@ namespace SmartLens.Transmission.Concrate
 
         public void GetImage(Image ımage, int size, Guid userId,IPEndPoint iPEndPoint)
         {
+            if(_form1!=null)
           _form1.SetStatistics(userId.ToString(),iPEndPoint, ımage,size.ToString()
                 , (++RequestCount).ToString());
         }
