@@ -14,22 +14,22 @@ namespace SmartLens.WinFormUI
 {
     public partial class Form1 : Form
     {
-        private ImgShow Img { get; set; }
+        private ImgShow _img;
 
         public Form1()
         {
-            Img = new ImgShow();
+            _img = new ImgShow();
             InitializeComponent();
         }
 
         private static string _title = "SmartLens";
         static int height { get; set; }
         private static string total { get; set; }
-        private string[] _loadingBar = { ".","..","...","."," .","  .","   ."};
+        private string[] _loadingBar = {"",".","..","...","."," .","  .","   ."};
         private int _loadingCount = 0;
-        public void GetFps(string fps,string downloadsize)
+        public void GetFps(string fps,string outputFrequency,string downloadsize)
         {
-            Img.GetFps(fps);
+            _img.GetFps(fps);
             string sgnlText = "No Signal!";
             if (!(int.Parse(fps)==0))
                 sgnlText = $"proccessing {_loadingBar[_loadingCount++]}";
@@ -44,6 +44,18 @@ namespace SmartLens.WinFormUI
             }
             else
                 label1.Text = sgnlText;
+
+            outputFrequency += " hz";
+            if (label14.InvokeRequired)
+            {
+                Action action = delegate {
+                    label14.Text = outputFrequency;
+                };
+                label14.Invoke(action);
+            }
+            else
+                label14.Text = outputFrequency;
+
 
             fps += " hz";
             if (label1.InvokeRequired)
@@ -73,7 +85,7 @@ namespace SmartLens.WinFormUI
         public void SetStatistics(string userId,IPEndPoint FromIpAddress, Image ımage,string size,string step)
         {
             step = "#" + step;
-             Img.GetImage(ımage, size);
+            _img.GetImage(ımage, size);
              height = (int.Parse(size) + height);
            
             if (height > 1024)
@@ -137,8 +149,8 @@ namespace SmartLens.WinFormUI
             {
                 notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
                 notifyIcon1.BalloonTipText = "İzlence menüsüne buradan ulaşabilirsiniz.";
-                notifyIcon1.BalloonTipTitle = "Smart Lens";
-                notifyIcon1.Text = "Smart Lens";
+                notifyIcon1.BalloonTipTitle = "SmartLens";
+                notifyIcon1.Text = "SmartLens";
                 notifyIcon1.Visible = true;
                 notifyIcon1.ShowBalloonTip(30000);
             }
@@ -157,7 +169,7 @@ namespace SmartLens.WinFormUI
         {
             notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
             notifyIcon1.BalloonTipText = "Server is Started";
-            notifyIcon1.BalloonTipTitle = "Smart Lens";
+            notifyIcon1.BalloonTipTitle = "SmartLens";
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(30000);
             
@@ -174,7 +186,7 @@ namespace SmartLens.WinFormUI
         }
         private void ShowDisplay(object sender, EventArgs e)
         {
-            Img.Show();
+            _img.Show();
         }
         private int lastChar = 0;
         private void logoTimer_Tick(object sender, EventArgs e)

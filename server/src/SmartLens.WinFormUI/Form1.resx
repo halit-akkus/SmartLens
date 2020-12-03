@@ -1083,7 +1083,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1146,7 +1146,7 @@
     <value>1</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 43</value>
+    <value>13, 43</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>246, 41</value>
@@ -1164,10 +1164,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 96</value>
+    <value>12, 143</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>246, 41</value>
@@ -1185,10 +1185,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 152</value>
+    <value>12, 199</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>246, 41</value>
@@ -1206,10 +1206,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 208</value>
+    <value>12, 255</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>246, 41</value>
@@ -1227,10 +1227,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>13, 272</value>
+    <value>13, 302</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>245, 41</value>
@@ -1248,7 +1248,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1311,7 +1311,7 @@
     <value>1</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 336</value>
+    <value>12, 349</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>245, 41</value>
@@ -1329,19 +1329,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="sgnl.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
   <data name="sgnl.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 550</value>
+    <value>7, 578</value>
   </data>
   <data name="sgnl.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>0, 15</value>
+    <value>39, 15</value>
   </data>
   <data name="sgnl.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
+  </data>
+  <data name="sgnl.Text" xml:space="preserve">
+    <value>Status</value>
   </data>
   <data name="&gt;&gt;sgnl.Name" xml:space="preserve">
     <value>sgnl</value>
@@ -1353,7 +1356,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;sgnl.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1362,13 +1365,16 @@
     <value>SimSun, 20.25pt, style=Italic</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>56, 485</value>
+    <value>64, 495</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>0, 27</value>
+    <value>138, 27</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>SmartLens</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -1380,7 +1386,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -1443,7 +1449,7 @@
     <value>1</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 393</value>
+    <value>12, 396</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>245, 56</value>
@@ -1461,6 +1467,87 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label13.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 9</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>138, 21</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Output Frequency:</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>151, 0</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>25, 32</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 90</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>246, 41</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
@@ -1473,7 +1560,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>273, 596</value>
+    <value>273, 605</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

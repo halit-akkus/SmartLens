@@ -23,7 +23,7 @@ namespace SmartLens.Transmission.Concrate
 
         public async void ServerStarted(IListener listener, int port)
         {
-
+            var intervall = Intervall.Get();
             while (true)
             {
                 var result = await _detectedManager.ReceiveResult(listener, port);
@@ -50,6 +50,7 @@ namespace SmartLens.Transmission.Concrate
                 {
                     await _client.SendData(getClient.IpEndPoint, getBytes);
 
+                    intervall.SetOutInputFrequency();
                     _clientEp.RemoveClientByUserId(result.Data.UserId);
                 }
 
