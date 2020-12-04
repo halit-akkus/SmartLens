@@ -108,6 +108,7 @@ serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
 
 
 def get_started_image_detected():
+ try :
   with tf.Session(graph=detection_graph) as sess:
    while True:
     print('Receive image:')
@@ -144,7 +145,10 @@ def get_started_image_detected():
     stream = StreamData(result.UserId,detection_classes)
     json_str = json.dumps(stream.__dict__)
     serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
-
+ except ConnectionResetError:
+    print('connection lost!')
+    pass
+   
 
 threading.Thread(target=get_started_image_detected).start()
 root.mainloop()

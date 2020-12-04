@@ -28,9 +28,17 @@ namespace SmartLens.Transmission.ClientEndPoint
 
         public void RemoveClientByUserId(Guid UserId)
         {
-            var client = ClientList.ToList().FirstOrDefault(client => client.UserId == UserId);
-
-            ClientList.ToList().Remove(client);
+            lock (ClientList)
+            {
+                foreach (var client in ClientList.ToList())
+                {
+                    if (client.UserId==UserId)
+                    {
+                        ClientList.Remove(client);
+                    }
+                }
+            }
+         
         }
     }
 }
