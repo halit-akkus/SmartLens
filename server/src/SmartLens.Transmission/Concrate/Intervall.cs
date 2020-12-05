@@ -84,7 +84,8 @@ namespace SmartLens.Transmission.Concrate
             GetImage(image,size,userId , statistics.IPEndPoint);
             DownloadSize(size);
             SetInputFps();
-            Console.WriteLine($" OK : {size}KB");
+            Console.Clear();
+            Console.WriteLine($" OK : EndPoint: {statistics.IPEndPoint} size: {size}KB");
         }
     }
 }
