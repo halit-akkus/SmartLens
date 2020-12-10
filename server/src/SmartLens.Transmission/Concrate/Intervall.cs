@@ -18,13 +18,14 @@ namespace SmartLens.Transmission.Concrate
         private static int _DownloadSize = 0;
         public static Form1 _form1;
         private static BigInteger RequestCount=0;
-
+       
        
         public static Intervall Get()
         {
             if (_intervall == null)
             {
                 _intervall = new Intervall();
+                
                 _intervall.Elapsed += new ElapsedEventHandler(OnTimedEvent);
                 timerEnabled(1000);
             }
@@ -84,6 +85,7 @@ namespace SmartLens.Transmission.Concrate
             GetImage(image,size,userId , statistics.IPEndPoint);
             DownloadSize(size);
             SetInputFps();
+            ConsoleEffect.SetColor();
             Console.WriteLine($" OK : {size}KB");
         }
     }
