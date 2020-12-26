@@ -43,14 +43,16 @@ Bir sorun halinde, tavsiye/öneri durumlarında veya geliştirme isteğiniz oldu
 
 
 
-# GENEL KURULUMLAR
-Tensorflow object detection api kullanmaktayız.
-# Anaconda kurulumu
+# GENEL KURULUMLAR (tensorflow/anaconda)
+
+Tensorflow object detection api kullanılmıştır.
+
+# Anaconda "5.1.0" kurulumu
 
 Anaconda 5.1.0 versiyonunu indirin. Bu versiyon tensorflow 1.13.2 versiyonu ile uyumludur.
 Bulacağınız adres: https://repo.anaconda.com/archive/
 
-# Tensorflow kurulumu
+# Tensorflow "1.13.2" kurulumu
 
 tensorflow krulumu için aşağıdaki komutu kullanın.
 
@@ -69,5 +71,9 @@ Kurulum tamamlandıktan sonra aşağıdaki komutu çalıştırın.
 
 'Hello, TensorFlow!' mesajını alıyorsanız tensorflow kurulumu başarılı demektir.
 
+
+❗️❗️ Nesne tanımada daha isabetli sonuçlar elde etmek istiyorsanız, aşağıda daha farklı modelleri kullanabileceğiniz bağlantı adresini bırakıyorum.
+
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md
 
 
