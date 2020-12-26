@@ -100,7 +100,7 @@ https://drive.google.com/file/d/14Xzdw5AwGxXKu0zQOU6UCiMYfFxtGLRA/view?usp=shari
 
 ❗️ Bu fotoğrafta kısacası, test istemcisi görüntüyü merkezi sunucuna yolluyor, merkezi sunucu ise load balancing yaparak ilgili python nesne tanıma sunucusuna yolluyor,
 tanınan nesneler bir array([1,3,5,10]) olarak merkezi sunucuya daha sonrasında ise istemciye geri ulaşıyor.
-Test olarak ise fotoğraf'ta görültüğü üzere test amaçlı youtube ile bir video oynatılmıştır.
+Test olarak ise fotoğraf'ta görüldüğü üzere test amaçlı youtube ile bir video oynatılmıştır.
 
 
 ![alt text](https://halit.org/7.jpg)
