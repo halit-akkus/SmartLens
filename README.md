@@ -72,7 +72,8 @@ Kurulum tamamlandıktan sonra aşağıdaki komutu çalıştırın.
 'Hello, TensorFlow!' mesajını alıyorsanız tensorflow kurulumu başarılı demektir.
 
 
-❗️❗️ Nesne tanımada daha isabetli sonuçlar elde etmek istiyorsanız, aşağıda daha farklı modelleri kullanabileceğiniz bağlantı adresini bırakıyorum.
+❗️❗️ Projede "ssd_mobilenet_v1_coco" modeli kullanılmıştır.Nesne tanımada daha isabetli sonuçlar elde etmek istiyorsanız veya daha performanslı modelleri incelemek istiyorsanız, aşağıda daha farklı modelleri kullanabileceğiniz bağlantı adresini bırakıyorum.
+ 
 
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md
 
