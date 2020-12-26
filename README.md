@@ -92,8 +92,6 @@ https://drive.google.com/file/d/14Xzdw5AwGxXKu0zQOU6UCiMYfFxtGLRA/view?usp=shari
 
 ![alt text](https://halit.org/3.jpg)
 
-![alt text](https://halit.org/4.jpg)
-
 ![alt text](https://halit.org/6.jpg)
 
 ❗️ Bu fotoğrafta kısacası, test istemcisi görüntüyü merkezi sunucuna yolluyor, merkezi sunucu ise load balancing yaparak ilgili python nesne tanıma sunucusuna yolluyor,
