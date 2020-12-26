@@ -78,3 +78,20 @@ Kurulum tamamlandıktan sonra aşağıdaki komutu çalıştırın.
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md
 
 
+# Örnek video
+
+https://drive.google.com/file/d/14Xzdw5AwGxXKu0zQOU6UCiMYfFxtGLRA/view?usp=sharing
+
+# Görüntüler
+
+![alt text](https://halit.org/1.jpg)
+
+![alt text](https://halit.org/2.jpg)
+
+![alt text](https://halit.org/3.jpg)
+
+![alt text](https://halit.org/4.jpg)
+
+![alt text](https://halit.org/5.jpg)
+
+![alt text](https://halit.org/6.jpg)
