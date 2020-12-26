@@ -88,7 +88,11 @@ https://drive.google.com/file/d/14Xzdw5AwGxXKu0zQOU6UCiMYfFxtGLRA/view?usp=shari
 
 ![alt text](https://halit.org/2.jpg)
 
+❗️ Test görüntüsü merkezi sunucuya ulaştı.
+
 ![alt text](https://halit.org/1.jpg)
+
+❗️Python sunucusuna ulaştı ve vonuç görüntü.
 
 ![alt text](https://halit.org/3.jpg)
 
