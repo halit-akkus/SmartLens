@@ -105,8 +105,6 @@ Test olarak ise fotoğraf'ta görüldüğü üzere test amaçlı youtube ile bir
 
 ![alt text](https://halit.org/7.jpg)
 
-![alt text](https://halit.org/8.jpg)
-
 ![alt text](https://halit.org/9.jpg)
 
 ![alt text](https://halit.org/10.jpg)
