@@ -108,46 +108,46 @@ serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
 
 
 def get_started_image_detected():
- try :
   with tf.Session(graph=detection_graph) as sess:
    while True:
-    print('Receive image:')
-    data, addr = serverSock.recvfrom(999999)
-    result = Result(data.decode())
-    print ("Receive: " + result.UserId)
-    image = base64.b64decode(result.Image)
-    image = io.BytesIO(image)
-    image_detected = Image.open(image)
-    print(image_detected)
-    image_np = load_image_into_numpy_array(image_detected)
-    image_np_expanded = np.expand_dims(image_np, axis=0)
-    output_dict = run_inference_for_single_image(image_np, detection_graph,sess)
-    vis_util.visualize_boxes_and_labels_on_image_array(
-       image_np,
-       output_dict['detection_boxes'],
-       output_dict['detection_classes'],
-       output_dict['detection_scores'],
-       category_index,
-       instance_masks=output_dict.get('detection_masks'),
-       use_normalized_coordinates=True,
-       line_thickness=8)
-    output_image = ImageTk.PhotoImage(Image.fromarray(image_np))
-    tkinter.Label(root, image = output_image).place(x = 0, y = 0)
-    detection_scores = []
-    detection_classes = []
-    for key in  output_dict['detection_scores']:
-        if key <= 0.5: break
-        if key > 0.5:
-            detection_scores.append(key)
-    for key in range(len(detection_scores)):
-        detection_classes.append(str(output_dict['detection_classes'][key]))
-    print(detection_classes)
-    stream = StreamData(result.UserId,detection_classes)
-    json_str = json.dumps(stream.__dict__)
-    serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
- except ConnectionResetError:
-    print('connection lost!')
-    pass
+    try :
+      print('Receive image:')
+      data, addr = serverSock.recvfrom(999999)
+      result = Result(data.decode())
+      print ("Receive: " + result.UserId)
+      image = base64.b64decode(result.Image)
+      image = io.BytesIO(image)
+      image_detected = Image.open(image)
+      print(image_detected)
+      image_np = load_image_into_numpy_array(image_detected)
+      image_np_expanded = np.expand_dims(image_np, axis=0)
+      output_dict = run_inference_for_single_image(image_np, detection_graph,sess)
+      vis_util.visualize_boxes_and_labels_on_image_array(
+         image_np,
+         output_dict['detection_boxes'],
+         output_dict['detection_classes'],
+         output_dict['detection_scores'],
+         category_index,
+         instance_masks=output_dict.get('detection_masks'),
+         use_normalized_coordinates=True,
+         line_thickness=8)
+      output_image = ImageTk.PhotoImage(Image.fromarray(image_np))
+      tkinter.Label(root, image = output_image).place(x = 0, y = 0)
+      detection_scores = []
+      detection_classes = []
+      for key in  output_dict['detection_scores']:
+          if key <= 0.5: break
+          if key > 0.5:
+              detection_scores.append(key)
+      for key in range(len(detection_scores)):
+          detection_classes.append(str(output_dict['detection_classes'][key]))
+      print(detection_classes)
+      stream = StreamData(result.UserId,detection_classes)
+      json_str = json.dumps(stream.__dict__)
+      serverSock.sendto(json_str.encode(), (UDP_IP_ADDRESS, 1200))
+    except ConnectionResetError:
+        print('connection lost!')
+        pass
    
 
 threading.Thread(target=get_started_image_detected).start()
