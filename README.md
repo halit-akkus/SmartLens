@@ -1,7 +1,7 @@
-# SMARTLENS ❔  
+# SMART LENS ❔  
 Bu projede, görme engelli bireyler için, bulut teknoloji ve derin öğrenme destekli yapay görme sistemi geliştirme amaçlandı.
 
-#Çalışma prensibi ❔
+# Çalışma prensibi ❔
 Görme engelli bireyin telefonunda'ki mobil uygulama ile etrafında'ki nesnelerin görüntüleri çekilip merkezi sunucuya iletilir. Merkezi sunucu ise load balancing yaparak ilgili musait nesne tanıma sunucusuna iletir. Ve nihai sonuçlar üretildikten sonra geriye merkezi sunucuya cevaplar gönderilir ve son olarak görme engelli bireye ulaşır ve sesli çıktı üretilir.
 
 Merkezi sunucudan kısaca bahsedecek olursak, projenin bir merkezi sunucusu(.NET CORE) var. Bu sunucuyu; Load balancing, crud, auth, validation, aspect gibi işlemlerimizi
@@ -16,7 +16,7 @@ Merkezi sunucumuz kendisine gelen bir görüntü bilgisini #"load balancing" yap
 
 
 
-#KURULUM VE KULLANIM  🚀 
+# KURULUM VE KULLANIM  🚀 
 
  ❗️ Bilgisayarınızda  anaconda "5.1.0" versiyonu kurulu değilse veya Tensorflow "1.13.2" sürümü kurulu değilse aşağıda # GENEL KURULUMLAR adımlarını takip edin.
 
@@ -32,6 +32,7 @@ Merkezi sunucumuz kendisine gelen bir görüntü bilgisini #"load balancing" yap
 
 ➡️ Daha sonra istemci olarak, .net ile test amaçlı yazılan projeyi açıyoruz. Bunun için; client/SmartLens.UITestClient/SmartLens.UITransmissionTestClient.sln 
 projesini açarak derleyelim. İstemciyi sunucunun olduğu bilgisayarda çalıştırdığınız varsayılmıştır. Farklı bilgisayarlarda deneyecekseniz, ip adresini(varsayılan: 127.0.0.1) değiştirmeyi unutmayın.
+
 ➡️ Görüntü gönderimi başlamıştır. Sunucular ile istemciler arasında veri transferi sorunsuz ilerliyor olması gerekmektedir.
 
 ❗️ İstemci olarak, test istemcisi olduğundan bir kamera kullanılmamıştır. Görüntü olarak bilgisayarınızın sol üst köşesinden 500*500 çözünürlüğünde ekran kaydı göndermektedir.
