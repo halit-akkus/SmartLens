@@ -80,7 +80,7 @@ https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc
 
 # Örnek video
 
-https://drive.google.com/file/d/14Xzdw5AwGxXKu0zQOU6UCiMYfFxtGLRA/view?usp=sharing
+https://www.youtube.com/watch?v=rr0UUIytpO8
 
 # Görüntüler
 
