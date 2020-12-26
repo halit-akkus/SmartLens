@@ -105,6 +105,8 @@ Test olarak ise fotoğraf'ta görüldüğü üzere test amaçlı youtube ile bir
 
 ![alt text](https://halit.org/7.jpg)
 
+❗️ ❗️ ❗️  Aşağıdaki görüntülerde, sol taraf python nesne tanıma sunucusu/sunucuları, sağ taraf ise merkezi sunucuya ulaşmış görüntüler.
+
 ![alt text](https://halit.org/9.jpg)
 
 ![alt text](https://halit.org/10.jpg)
