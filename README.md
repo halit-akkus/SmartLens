@@ -84,6 +84,8 @@ https://drive.google.com/file/d/14Xzdw5AwGxXKu0zQOU6UCiMYfFxtGLRA/view?usp=shari
 
 # Görüntüler
 
+❗️ Test görüntüsü.
+
 ![alt text](https://halit.org/2.jpg)
 
 ![alt text](https://halit.org/1.jpg)
