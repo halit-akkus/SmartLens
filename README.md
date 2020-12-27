@@ -92,7 +92,7 @@ https://www.youtube.com/watch?v=rr0UUIytpO8
 
 ![alt text](https://halit.org/1.jpg)
 
-❗️Python sunucusuna ulaştı ve sonuç görüntü.
+❗️(Load balancing yapılarak) Python sunucusuna ulaştı ve sonuç görüntü.
 
 ![alt text](https://halit.org/3.jpg)
 
