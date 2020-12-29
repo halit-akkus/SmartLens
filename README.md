@@ -7,7 +7,7 @@ Görme engelli bireyin telefonunda'ki mobil uygulama ile etrafında'ki nesneleri
 Merkezi sunucudan kısaca bahsedecek olursak, projenin bir merkezi sunucusu(.NET CORE) var. Bu sunucuyu; Load balancing, crud, auth, validation, aspect gibi işlemlerimizi
 yapmak için kullanıyoruz. 
 
-#Load balancing neden kullanıyoruz ❔
+# Load balancing neden kullanıyoruz ❔
 Nesne tanıma yük bakımından maliyetli bir işlemdir. Sunucu üzerinde dikey ölçekleme(daha güçlü bir sunucu) yapmak yerine,
 yatay ölçekleme(aynı performans ile daha fazla sunucu) yapmayı tercih ettik. Dolayısıyla merkezi sunucumuz yanında asıl nesne tanıma işlemlerimiz için,
 python kullandık. Python ile ile yazdığımız birden fazla instance'ı farklı farklı sunucularda deploy ettik.
