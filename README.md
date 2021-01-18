@@ -122,3 +122,8 @@ Test olarak ise fotoğraf'ta görüldüğü üzere test amaçlı youtube ile bir
 ![alt text](https://halit.org/15.jpg)
 
 ![alt text](https://halit.org/16.jpg)
+
+
+👤
+Github: @halitakkus
+LinkedIn: @haliakkus
