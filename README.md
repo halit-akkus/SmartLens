@@ -1,4 +1,4 @@
-# SMART LENS ❔  
+# SMART LENS
 Bu projede, görme engelli bireyler için, bulut teknoloji ve derin öğrenme destekli yapay görme sistemi geliştirme amaçlandı.
 
 # Çalışma prensibi?
@@ -72,7 +72,7 @@ Kurulum tamamlandıktan sonra aşağıdaki komutu çalıştırın.
 'Hello, TensorFlow!' mesajını alıyorsanız tensorflow kurulumu başarılı demektir.
 
 
-❗️❗️ Projede "ssd_mobilenet_v1_coco" modeli kullanılmıştır.Nesne tanımada daha isabetli sonuçlar elde etmek istiyorsanız veya daha performanslı modelleri incelemek istiyorsanız, aşağıda daha farklı modelleri kullanabileceğiniz bağlantı adresini bırakıyorum.
+ Projede "ssd_mobilenet_v1_coco" modeli kullanılmıştır.Nesne tanımada daha isabetli sonuçlar elde etmek istiyorsanız veya daha performanslı modelleri incelemek istiyorsanız, aşağıda daha farklı modelleri kullanabileceğiniz bağlantı adresini bırakıyorum.
  
 
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md
@@ -84,15 +84,15 @@ https://www.youtube.com/watch?v=rr0UUIytpO8
 
 # Görüntüler
 
-❗️ Test görüntüsü.
+Test görüntüsü.
 
 ![alt text](https://halit.org/2.jpg)
 
-❗️ Test görüntüsü merkezi sunucuya ulaştı.
+Test görüntüsü merkezi sunucuya ulaştı.
 
 ![alt text](https://halit.org/1.jpg)
 
-❗️(Load balancing yapılarak) Python sunucusuna ulaştı ve sonuç görüntü.
+❗(Load balancing yapılarak) Python sunucusuna ulaştı ve sonuç görüntü.
 
 ![alt text](https://halit.org/3.jpg)
 
