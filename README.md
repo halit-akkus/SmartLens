@@ -84,7 +84,7 @@ https://www.youtube.com/watch?v=rr0UUIytpO8
 
 # Görüntüler
 
-Sunucu
+
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/5db47c7c89fc781659415040c2c1cc1c-full.jpg)
 
 Test görüntüsü.
