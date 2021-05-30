@@ -1,4 +1,4 @@
-# SMART LENS
+# SMART LENS 😎
 Bu projede, görme engelli bireyler için, bulut teknoloji ve derin öğrenme destekli yapay görme sistemi geliştirme amaçlandı.
 
 
