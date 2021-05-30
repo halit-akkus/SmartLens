@@ -84,44 +84,34 @@ https://www.youtube.com/watch?v=rr0UUIytpO8
 
 # Görüntüler
 
+Sunucu
+![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/5db47c7c89fc781659415040c2c1cc1c-full.jpg)
+
 Test görüntüsü.
 
-![alt text](https://halit.org/2.jpg)
+![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/4fdd11a9af120eb3eead0c3e0b327718-full.jpg)
 
 Test görüntüsü merkezi sunucuya ulaştı.
 
-![alt text](https://halit.org/1.jpg)
+![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/ee6540c2444e18c9f91a9153a03573bb-full.jpg)
 
-❗(Load balancing yapılarak) Python sunucusuna ulaştı ve sonuç görüntü.
+❗(Load balancing yapılarak) Python sunucusuna ulaştı ve sonuç görüntü(Bazı nesneler).
 
-![alt text](https://halit.org/3.jpg)
+![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/304e06080b4e5b2564f5c8206c7d5c9e-full.jpg)
 
-![alt text](https://halit.org/6.jpg)
+
+![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/684615451b5f1facd11e4efa14287465-full.jpg)
+
+
+
 
 ❗️ Bu fotoğrafta kısacası, test istemcisi görüntüyü merkezi sunucuna yolluyor, merkezi sunucu ise load balancing yaparak ilgili python nesne tanıma sunucusuna yolluyor,
 tanınan nesneler bir array([1,3,5,10]) olarak merkezi sunucuya daha sonrasında ise istemciye geri ulaşıyor.
 Test olarak ise fotoğraf'ta görüldüğü üzere test amaçlı youtube ile bir video oynatılmıştır.
 
 
-![alt text](https://halit.org/7.jpg)
 
-❗️ ❗️ ❗️  Aşağıdaki görüntülerde, sol taraf python nesne tanıma sunucusu/sunucuları, sağ taraf ise merkezi sunucuya ulaşmış görüntüler.
 
-![alt text](https://halit.org/9.jpg)
-
-![alt text](https://halit.org/10.jpg)
-
-![alt text](https://halit.org/11.jpg)
-
-![alt text](https://halit.org/12.jpg)
-
-![alt text](https://halit.org/13.jpg)
-
-![alt text](https://halit.org/14.jpg)
-
-![alt text](https://halit.org/15.jpg)
-
-![alt text](https://halit.org/16.jpg)
 
 
 👤
