@@ -1,6 +1,7 @@
 # SMART LENS
 Bu projede, görme engelli bireyler için, bulut teknoloji ve derin öğrenme destekli yapay görme sistemi geliştirme amaçlandı.
 
+
 # Çalışma prensibi?
 Görme engelli bireyin telefonunda'ki mobil uygulama ile etrafında'ki nesnelerin görüntüleri çekilip merkezi sunucuya iletilir. Merkezi sunucu ise load balancing yaparak ilgili musait nesne tanıma sunucusuna iletir. Ve nihai sonuçlar üretildikten sonra geriye merkezi sunucuya cevaplar gönderilir ve son olarak görme engelli bireye ulaşır ve sesli çıktı üretilir.
 
