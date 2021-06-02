@@ -12,8 +12,11 @@ namespace SmartLens.Transmission.Concrate
     public class ResponseClient : IResponseClient
     {
         private IImageDetectedManager _detectedManager;
+
         private IClient _client;
+
         private IClientEp _clientEp;
+
         public ResponseClient(IClientEp clientEp, IImageDetectedManager imageDetectedManager, IClient client)
         {
             _clientEp = clientEp;
@@ -36,16 +39,18 @@ namespace SmartLens.Transmission.Concrate
                     }
                     continue;
                 }
-
                 
                 var sb = new StringBuilder();
+
                 foreach (var item in result.Data.DetectionList)
                 {
                     sb.Append($" {item}");
                 }
+
                 var getBytes = Encoding.ASCII.GetBytes(sb.ToString());
 
                 var getClient = _clientEp.GetClientByUserId(result.Data.UserId);
+
                 if (getClient != null)
                 {
                     await _client.SendData(getClient.IpEndPoint, getBytes);
@@ -53,10 +58,7 @@ namespace SmartLens.Transmission.Concrate
                     intervall.SetOutInputFrequency();
                     _clientEp.RemoveClientByUserId(result.Data.UserId);
                 }
-
             }
-
         }
-
     }
 }

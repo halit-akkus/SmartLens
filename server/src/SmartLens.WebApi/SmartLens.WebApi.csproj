@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartLens.Client\SmartLens.Client.csproj" />
+    <ProjectReference Include="..\SmartLens.Entities\SmartLens.Entities.csproj" />
+  </ItemGroup>
+
+
+</Project>

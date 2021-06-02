@@ -6,7 +6,8 @@ namespace SmartLens.Client
 {
    public interface IClient
     {
-        Task SendData
-            (IPEndPoint ipEndPoint, byte[] data);
+        Task SendData(IPEndPoint ipEndPoint, byte[] data);
+     
+        Task<byte[]> SendData(IPEndPoint ipEndPoint, string imageByBase64);
     }
 }

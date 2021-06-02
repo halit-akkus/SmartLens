@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using SmartLens.Client;
 using SmartLens.Entities.Results;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -11,6 +12,7 @@ namespace SmartLens.Client
     public class Udp : IClient
     {
         private UdpClient _udpClient;
+
         public Udp()
         {
             _udpClient = new UdpClient();
@@ -24,6 +26,23 @@ namespace SmartLens.Client
               });
         }
 
+        public async Task<byte[]> SendData(IPEndPoint ipEndPoint, string imageByBase64)
+        {
+            var stream = new Stream
+            {
+                Image = Encoding.ASCII.GetBytes(imageByBase64),
+                UserId = Guid.NewGuid()
+            };
 
+            var serialize = JsonConvert.SerializeObject(stream);
+
+            byte[] bytes = Encoding.ASCII.GetBytes(serialize);
+
+            await _udpClient.SendAsync(bytes, bytes.Length, ipEndPoint);
+
+            var receive = await _udpClient.ReceiveAsync();
+
+            return receive.Buffer;
+        }
     }
 }

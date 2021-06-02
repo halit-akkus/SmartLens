@@ -12,9 +12,10 @@ namespace SmartLens.Transmission.Concrate
     public  class Server:IServer
     {
         private IImageDetectedManager _detectedManager;
+
         private IClientEp _clientEp;
         
-        public Server(IImageDetectedManager imageDetectedManager,IClientEp clientEp)
+        public Server(IImageDetectedManager imageDetectedManager, IClientEp clientEp)
         {
             _detectedManager = imageDetectedManager;
             _clientEp = clientEp;
@@ -24,8 +25,10 @@ namespace SmartLens.Transmission.Concrate
         {
             var intervall = Intervall.Get();
 
-            new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect)).Start(listener.Message().Length); 
-            
+            var consoleEffect = new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect));
+
+            consoleEffect.Start(listener.Message().Length);
+
             while (true)
             {
                 Console.WriteLine();
@@ -38,7 +41,6 @@ namespace SmartLens.Transmission.Concrate
                 var checkResult = _detectedManager.ResultValidator(stream);
                 if (!checkResult.IsSuccess)
                 {
-
                     foreach (var error in checkResult.Messages)
                     {
                         Console.WriteLine($"Server Error=>{error.Key} / Desc:{error.Message} ");
