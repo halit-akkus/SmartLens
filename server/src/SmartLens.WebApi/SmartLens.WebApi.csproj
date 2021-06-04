@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NSwag.AspNetCore" Version="13.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SmartLens.Client\SmartLens.Client.csproj" />
     <ProjectReference Include="..\SmartLens.Entities\SmartLens.Entities.csproj" />
   </ItemGroup>
