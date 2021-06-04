@@ -114,7 +114,7 @@ Ayrıca "swagger" dökümantasyon aracını kullanarak bir api vasıtası ile se
 
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/6f80998016f17150fb4033e1ac82eccc-full.png)
 
-Örnek amaçlı servisimize "fetch" isteklerinde bulunan mvc uygulamasından kareler.
+Örnek amaçlı servisimize "fetch" isteklerinde bulunan bir mvc uygulamasından kareler.
 
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/d2c7d3aabac966f29b3e3f1449244b5d-full.png)
 
