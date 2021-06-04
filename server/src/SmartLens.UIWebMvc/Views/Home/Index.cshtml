@@ -12,6 +12,12 @@
     <div class="card-body">
         <h5 class="card-title">You will use by smartlens to object detect</h5>
         <p class="card-text">Try an example if you want image detect by smart lens.</p>
-        <input type="file">
+        <input type="file" id="myfile" onchange="GetImageDetected()">
     </div>
 </div>
+
+@section Scripts
+{
+    <script src="~/js/imagedetect.js"></script>
+}
+

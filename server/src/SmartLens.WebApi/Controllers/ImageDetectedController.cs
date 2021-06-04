@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using SmartLens.Client;
+using SmartLens.WebApi.Models.CustomModels.Request;
 
 namespace SmartLens.WebApi.Controllers
 {
@@ -26,13 +27,14 @@ namespace SmartLens.WebApi.Controllers
             _client = client;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("Detected")]
-        public async Task<IActionResult> Detected(string image)
+        public async Task<IActionResult> Detected([FromBody] ImageDetect imageDetect)
         {
+            return Ok();
             var ipEndPoint = new IPEndPoint(IPAddress.Parse(Ip), Port);
 
-            var result = await _client.SendData(ipEndPoint,image);
+            var result = await _client.SendData(ipEndPoint, imageDetect.imageBase64);
 
             var encodingToString = Encoding.UTF7.GetString(result);
 
