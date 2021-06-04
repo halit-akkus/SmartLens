@@ -125,4 +125,4 @@ Ayrıca "swagger" dökümantasyon aracını kullanarak bir api vasıtası ile se
 👤
 Github: @halitakkus
 LinkedIn: @haliakkus
-Web Site: http:halit.org
+Web Site: halit.org
