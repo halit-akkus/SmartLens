@@ -114,11 +114,14 @@ Ayrıca "swagger" dökümantasyon aracını kullanarak bir api vasıtası ile se
 
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/6f80998016f17150fb4033e1ac82eccc-full.png)
 
-Örnek amaçlı servisimize "fetch" isteklerinde bulunan mvc uygulamasından bir kareler.
+Örnek amaçlı servisimize "fetch" isteklerinde bulunan mvc uygulamasından kareler.
 
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/d2c7d3aabac966f29b3e3f1449244b5d-full.png)
 
+
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/42fc7490d48df0eb4ca2ea5197af8a26-full.png)
+
+
 👤
 Github: @halitakkus
 LinkedIn: @haliakkus
