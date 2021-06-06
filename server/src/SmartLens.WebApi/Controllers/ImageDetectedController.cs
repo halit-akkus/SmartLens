@@ -31,7 +31,6 @@ namespace SmartLens.WebApi.Controllers
         [Route("Detected")]
         public async Task<IActionResult> Detected([FromBody] ImageDetect imageDetect)
         {
-            return Ok();
             var ipEndPoint = new IPEndPoint(IPAddress.Parse(Ip), Port);
 
             var result = await _client.SendData(ipEndPoint, imageDetect.imageBase64);

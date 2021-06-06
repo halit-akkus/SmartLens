@@ -26,7 +26,7 @@ namespace SmartLens.Transmission.Concrate
             var intervall = Intervall.Get();
 
             var consoleEffect = new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect));
-
+            
             consoleEffect.Start(listener.Message().Length);
 
             while (true)

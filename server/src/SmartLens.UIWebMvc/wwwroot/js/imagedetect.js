@@ -1,19 +1,29 @@
 ﻿async function GetImageDetected()
 {
-    var url = `https://localhost:44316/ImageDetected/Detected`
     var base64 = await FileToBase64()
 
-    console.log(base64)
+    //Obj of data to send in future like a dummyDb
+    const ImageDetect = { imageBase64: base64 };
 
-    var ImageDetect = {
-        imageBase64 : 'test'
-    }
-
-    fetch(url,{
-        method: 'post',
-        body: ImageDetect
+    //POST request with body equal on data in JSON format
+    fetch('/Home/Index', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(ImageDetect),
     })
-        .then(result => alert(result))
+        .then((response) => response.text())
+        //Then with the data from the response in JSON...
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        //Then with the error genereted...
+        .catch((error) => {
+            alert('Error:', error);
+        });
+
+
 }
 
 async function FileToBase64()
