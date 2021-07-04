@@ -2,6 +2,7 @@
 using SmartLens.Client;
 using SmartLens.Entities.Results;
 using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -30,7 +31,7 @@ namespace SmartLens.Client
         {
             var stream = new Stream
             {
-                Image = Encoding.ASCII.GetBytes(imageByBase64),
+                Image = Convert.FromBase64String(imageByBase64),
                 UserId = Guid.NewGuid()
             };
 
