@@ -5,6 +5,13 @@
     //Obj of data to send in future like a dummyDb
     const ImageDetect = { imageBase64: base64 };
 
+    var loadingElement = document.getElementById("loading_bar")
+
+    var image_result_display_element = document.getElementById("image_result_display_element")
+
+    loadingElement.style.display = "block";
+    image_result_display_element.style.display = "none";
+
     //POST request with body equal on data in JSON format
     fetch('/Home/Index', {
         method: 'POST',
@@ -16,7 +23,9 @@
         .then((response) => response.text())
         //Then with the data from the response in JSON...
         .then((data) => {
-            console.log('Success:', data);
+            loadingElement.style.display = "none";
+            document.getElementById("result_image_details").innerHTML = `Success: ${data}`;
+            image_result_display_element.style.display = "block";
         })
         //Then with the error genereted...
         .catch((error) => {

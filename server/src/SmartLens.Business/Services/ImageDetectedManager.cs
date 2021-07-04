@@ -11,6 +11,7 @@ namespace SmartLens.Business.Services
     public class ImageDetectedManager : IImageDetectedManager
     {
         private IImageDetectedService _imageDetectedService;
+
         public ImageDetectedManager(IImageDetectedService imageDetectedService)
         {
             _imageDetectedService = imageDetectedService;
@@ -37,8 +38,7 @@ namespace SmartLens.Business.Services
 
         public async Task<IDataResult<ResponseStream>> ReceiveResult(IListener listen,int port)
         {
-            
-              var checkReceive = await _imageDetectedService.ReceiveResult(listen, port);
+             var checkReceive = await _imageDetectedService.ReceiveResult(listen, port);
 
              var errorDataResult = new ErrorDataResult<ResponseStream>();
              if (listen == null)
@@ -46,6 +46,13 @@ namespace SmartLens.Business.Services
                  errorDataResult.AddMessage("InvalidParameters", "Nesnenin örneği oluşturulmamış.");
                  return errorDataResult;
              }
+
+            if (checkReceive == null)
+            {
+                errorDataResult.AddMessage("InvalidParameters", "Dönüş verisi boş.");
+                return errorDataResult;
+            }
+
             if (checkReceive.Length==0)
             {
                 errorDataResult.AddMessage("InvalidLength","Geçersiz veri.");
@@ -54,8 +61,7 @@ namespace SmartLens.Business.Services
 
             var stream = ResultParse<ResponseStream>.jsonDeserialize(checkReceive);
             
-             return new SuccessDataResult<ResponseStream>(stream);
-             
+            return new SuccessDataResult<ResponseStream>(stream);
         }
     }
 }

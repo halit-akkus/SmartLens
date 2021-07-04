@@ -19,18 +19,18 @@ namespace SmartLens.UITransmissionTestClient
 
         public async Task<byte[]> SendData(IStream stream)
         {
-              var serialize = JsonConvert.SerializeObject(stream);
-              byte[] bytes = Encoding.ASCII.GetBytes(serialize);
-            if (bytes.Length>64900)
+            var serialize = JsonConvert.SerializeObject(stream);
+            byte[] bytes = Encoding.ASCII.GetBytes(serialize);
+            if (bytes.Length > 64900)
             {
                 return new byte[] { };
             }
-              await  _udpClient.SendAsync(bytes, bytes.Length, _iPEndPoint);
+            await _udpClient.SendAsync(bytes, bytes.Length, _iPEndPoint);
 
             await Task.Delay(60);
-            //  var receive = await _udpClient.ReceiveAsync();
-             
-            return new byte[] { };
+            var receive = await _udpClient.ReceiveAsync();
+
+            return receive.Buffer;
         }
 
 

@@ -39,6 +39,7 @@ namespace SmartLens.Transmission.Concrate
                 var stream = ResultParse<Stream>.jsonDeserialize(result.ReceiveData);
                 
                 var checkResult = _detectedManager.ResultValidator(stream);
+
                 if (!checkResult.IsSuccess)
                 {
                     foreach (var error in checkResult.Messages)

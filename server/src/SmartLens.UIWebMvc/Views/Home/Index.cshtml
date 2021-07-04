@@ -15,6 +15,17 @@
         <input type="file" id="myfile" onchange="GetImageDetected()">
     </div>
 </div>
+<div class="mb-3 mt-3" style="display:none" id="loading_bar">
+    <img src="https://www.jernyao.com/v_comm/global/images/loading.gif" height="120" />
+</div>
+
+<div class="card text-white bg-success mb-3 mt-3" style="display:none" id="image_result_display_element">
+    <div class="card-header">İşlem Tamamlandı</div>
+    <div class="card-body">
+        <h5 class="card-title">Görüntü Başarıyla Tarandı</h5>
+        <p class="card-text" id="result_image_details"></p>
+    </div>
+</div>
 
 @section Scripts
 {

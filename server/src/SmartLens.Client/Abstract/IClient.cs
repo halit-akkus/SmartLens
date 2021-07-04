@@ -15,7 +15,7 @@ namespace SmartLens.Client
         Task SendData(IPEndPoint ipEndPoint, byte[] data);
      
         /// <summary>
-        /// StringBase64 tipindeki görüntü veririsini karşı tarafa yollar.
+        /// StringBase64 tipindeki görüntü veririsini karşı tarafa yollar ve cevap bekler.
         /// </summary>
         /// <param name="ipEndPoint"></param>
         /// <param name="imageByBase64"></param>

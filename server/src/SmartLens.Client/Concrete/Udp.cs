@@ -39,6 +39,7 @@ namespace SmartLens.Client
 
             byte[] bytes = Encoding.ASCII.GetBytes(serialize);
 
+
             await _udpClient.SendAsync(bytes, bytes.Length, ipEndPoint);
 
             var receive = await _udpClient.ReceiveAsync();

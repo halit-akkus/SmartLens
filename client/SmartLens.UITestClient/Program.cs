@@ -39,13 +39,9 @@ namespace SmartLens.UITransmissionTestClient
                 Console.Write("İmage:");
 
                 var result =  _client.SendData(stream);
-              
-
              
                var encodingToString = Encoding.UTF7.GetString(result.Result);
                Console.WriteLine(encodingToString);
-               
-              
             }
         }
     }
