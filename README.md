@@ -126,7 +126,6 @@ Ayrıca "swagger" dökümantasyon aracını kullanarak bir api vasıtası ile se
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/42fc7490d48df0eb4ca2ea5197af8a26-full.png)
 
 
-![monolithic architecture](https://user-images.githubusercontent.com/46889995/128303370-4af8a18c-c7ad-4082-8b02-2e10caec4ac3.png)
 
 👤
 Github: @halitakkus
