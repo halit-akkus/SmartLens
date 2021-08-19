@@ -8,7 +8,6 @@ namespace SmartLens.UITransmissionTestClient
 {
     public class Udp : IClient
     {
-
         private UdpClient _udpClient;
         private IPEndPoint _iPEndPoint;
         public Udp(IPEndPoint iPEndPoint)
@@ -32,7 +31,5 @@ namespace SmartLens.UITransmissionTestClient
 
             return receive.Buffer;
         }
-
-
     }
 }
