@@ -21,17 +21,17 @@ Merkezi sunucumuz kendisine gelen bir görüntü bilgisini #"load balancing" yap
 
  ❗️ Bilgisayarınızda  anaconda "5.1.0" versiyonu kurulu değilse veya Tensorflow "1.13.2" sürümü kurulu değilse aşağıda # GENEL KURULUMLAR adımlarını takip edin.
 
-➡️ Öncelikle proje dosyalarını indiriyoruz.
+➡ Öncelikle proje dosyalarını indiriyoruz.
 
-➡️ Daha sonra server/src/SmartLens.sln dosyasını açarak merkezi sunucu projesini açmış oluruz. 
+➡ Daha sonra server/src/SmartLens.sln dosyasını açarak merkezi sunucu projesini açmış oluruz. 
 
-➡️ Projemizi derleyelim ve çalıştıralım. Merkezi sunucu başlayacaktır.
+➡ Projemizi derleyelim ve çalıştıralım. Merkezi sunucu başlayacaktır.
 
-➡️ Daha sonra server/object_detection/image_detected.bat ile python uygulamasını çalıştıralım. Veya cmd ile; python image_detected.py yazarak scripti çalıştırabilirsiniz.
+➡ Daha sonra server/object_detection/image_detected.bat ile python uygulamasını çalıştıralım. Veya cmd ile; python image_detected.py yazarak scripti çalıştırabilirsiniz.
 
-➡️ Nesne tanıma sunucusu başlamış oldu ve merkezi sunucudan verileri bekliyor.
+➡ Nesne tanıma sunucusu başlamış oldu ve merkezi sunucudan verileri bekliyor.
 
-➡️ Daha sonra istemci olarak, .net ile test amaçlı yazılan projeyi açıyoruz. Bunun için; client/SmartLens.UITestClient/SmartLens.UITransmissionTestClient.sln 
+➡ Daha sonra istemci olarak, .net ile test amaçlı yazılan projeyi açıyoruz. Bunun için; client/SmartLens.UITestClient/SmartLens.UITransmissionTestClient.sln 
 projesini açarak derleyelim. İstemciyi sunucunun olduğu bilgisayarda çalıştırdığınız varsayılmıştır. Farklı bilgisayarlarda deneyecekseniz, ip adresini(varsayılan: 127.0.0.1) değiştirmeyi unutmayın.
 
 ➡️ Görüntü gönderimi başlamıştır. Sunucular ile istemciler arasında veri transferi sorunsuz ilerliyor olması gerekmektedir.
@@ -86,22 +86,26 @@ https://www.youtube.com/watch?v=rr0UUIytpO8
 # Görüntüler
 
 
-![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/5db47c7c89fc781659415040c2c1cc1c-full.jpg)
+![6](https://user-images.githubusercontent.com/46889995/128303136-d6883c07-ddaf-4210-9937-6b8f82911856.jpg)
 
 Test görüntüsü.
 
-![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/4fdd11a9af120eb3eead0c3e0b327718-full.jpg)
+![5](https://user-images.githubusercontent.com/46889995/128303207-d7b2750f-f2ff-4295-9764-a5abc2381f1a.jpg)
 
 Test görüntüsü merkezi sunucuya ulaştı.
 
-![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/ee6540c2444e18c9f91a9153a03573bb-full.jpg)
+![1](https://user-images.githubusercontent.com/46889995/128303104-54c63f07-a6cc-4af8-86b7-33c141a9af8f.jpg)
+
 
 ❗(Load balancing yapılarak) Python sunucusuna ulaştı ve sonuç görüntü(Bazı nesneler).
 
-![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/304e06080b4e5b2564f5c8206c7d5c9e-full.jpg)
 
 
-![alt text](https://cdn1.bbcode0.com/uploads/2021/5/30/684615451b5f1facd11e4efa14287465-full.jpg)
+![2](https://user-images.githubusercontent.com/46889995/128303168-9952867b-203a-4546-aa86-3b2eb82e135a.jpg)
+
+![3](https://user-images.githubusercontent.com/46889995/128303174-11d38e2e-8e30-4e14-b453-e092fd752f63.jpg)
+
+![4](https://user-images.githubusercontent.com/46889995/128303181-e5cd10dd-233e-49bc-b503-d9926cb0980a.jpg)
 
 
 
@@ -120,6 +124,7 @@ Ayrıca "swagger" dökümantasyon aracını kullanarak bir api vasıtası ile se
 
 
 ![alt text](https://cdn1.bbcode0.com/uploads/2021/6/4/42fc7490d48df0eb4ca2ea5197af8a26-full.png)
+
 
 
 👤
