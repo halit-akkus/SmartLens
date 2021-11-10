@@ -88,7 +88,7 @@ https://www.youtube.com/watch?v=rr0UUIytpO8
 
 ![6](https://user-images.githubusercontent.com/46889995/128303136-d6883c07-ddaf-4210-9937-6b8f82911856.jpg)
 
-Test görüntüsü.
+Test görüntüsü. 
 
 ![5](https://user-images.githubusercontent.com/46889995/128303207-d7b2750f-f2ff-4295-9764-a5abc2381f1a.jpg)
 
