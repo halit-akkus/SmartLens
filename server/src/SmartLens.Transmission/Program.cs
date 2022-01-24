@@ -32,14 +32,14 @@ namespace SmartLens.Transmission
             _server = serviceProvider.Resolve<IServer>();
             _settings = serviceProvider.Resolve<ISettings>();
 
-            var getJson = _settings.getJson();
+            var getJson = _settings.GetJson();
             Console.WriteLine($"Settings: {getJson.Result}");
              _settings = JsonConvert.DeserializeObject<Settings>(getJson.Result);
 
 
-            int port = args.Length>0 ? int.Parse(args[0]) : _settings.frontServerPort;
+            int port = args.Length>0 ? int.Parse(args[0]) : _settings.FrontServerPort;
 
-            string protocol = args.Length > 1 ? args[1] : _settings.defaultProtocol;
+            string protocol = args.Length > 1 ? args[1] : _settings.DefaultProtocol;
 
             Console.WriteLine("Server => Running :)");
             Console.WriteLine("-------------------");
@@ -60,7 +60,7 @@ namespace SmartLens.Transmission
              
               var startClient = new Thread(delegate ()
              {
-                 _client.ServerStarted(listener,_settings.serviceServerPort);
+                 _client.ServerStarted(listener,_settings.ServiceServerPort);
              });
              startClient.Start();
              

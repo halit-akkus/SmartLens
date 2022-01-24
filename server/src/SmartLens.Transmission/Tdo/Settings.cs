@@ -9,13 +9,13 @@ namespace SmartLens.Transmission.Tdo
     public class Settings : ISettings
     {
 
-        public int frontServerPort { get; set; }
+        public int FrontServerPort { get; set; }
 
-        public int serviceServerPort { get; set; }
+        public int ServiceServerPort { get; set; }
 
-        public string defaultProtocol { get; set; }
+        public string DefaultProtocol { get; set; }
 
-        public async Task<string> getJson()
+        public async Task<string> GetJson()
         {
             var filePath = "Settings.json";
 
