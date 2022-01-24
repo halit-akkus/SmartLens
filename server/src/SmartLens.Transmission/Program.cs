@@ -25,7 +25,6 @@ namespace SmartLens.Transmission
        
         static void Main(string[] args)
         {
-
             var serviceProvider = ContainerConfiguration.Configure();
 
             _client = serviceProvider.Resolve<IResponseClient>();
@@ -36,8 +35,7 @@ namespace SmartLens.Transmission
             Console.WriteLine($"Settings: {getJson.Result}");
              _settings = JsonConvert.DeserializeObject<Settings>(getJson.Result);
 
-
-            int port = args.Length>0 ? int.Parse(args[0]) : _settings.FrontServerPort;
+            int port = args.Length > 0 ? int.Parse(args[0]) : _settings.FrontServerPort;
 
             string protocol = args.Length > 1 ? args[1] : _settings.DefaultProtocol;
 
@@ -49,23 +47,20 @@ namespace SmartLens.Transmission
 
             IListener listener = new ServerFactory(port).CreateListener(protocol);
 
-
             var startListener = new Thread(delegate ()
             {
                 _server.ServerStarted(listener);
             });
-            startListener.Start();
 
-            
+            startListener.Start();
              
-              var startClient = new Thread(delegate ()
+            var startClient = new Thread(delegate ()
              {
                  _client.ServerStarted(listener,_settings.ServiceServerPort);
              });
-             startClient.Start();
+
+            startClient.Start();
              
-
-
             AllocConsole();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
