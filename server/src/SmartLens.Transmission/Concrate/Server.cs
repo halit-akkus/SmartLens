@@ -6,6 +6,7 @@ using SmartLens.Transmission.ClientEndPoint;
 using SmartLens.Transmission.Tdo;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace SmartLens.Transmission.Concrate
 {
@@ -14,7 +15,7 @@ namespace SmartLens.Transmission.Concrate
         private IImageDetectedManager _detectedManager;
 
         private IClientEp _clientEp;
-        
+
         public Server(IImageDetectedManager imageDetectedManager, IClientEp clientEp)
         {
             _detectedManager = imageDetectedManager;
@@ -23,9 +24,9 @@ namespace SmartLens.Transmission.Concrate
 
         public  async void ServerStarted(IListener listener)
         {
-            var intervall = Intervall.Get();
+            Intervall intervall = Intervall.Get();
 
-            var consoleEffect = new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect));
+            Thread consoleEffect = new Thread(new ParameterizedThreadStart(ConsoleEffect.Effect));
             
             consoleEffect.Start(listener.Message().Length);
 
@@ -51,7 +52,7 @@ namespace SmartLens.Transmission.Concrate
                 
                 _clientEp.AddClient(stream.UserId,result.IPEndPoint);
 
-                var statistics = new StatisticsModel
+                StatisticsModel statistics = new StatisticsModel
                 {
                     Stream = stream,
                     IPEndPoint = result.IPEndPoint

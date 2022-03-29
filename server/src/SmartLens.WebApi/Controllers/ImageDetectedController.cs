@@ -18,6 +18,8 @@ namespace SmartLens.WebApi.Controllers
 
         private readonly IClient _client;
 
+        private readonly 
+
         private const int Port = 11000;
 
         private const string Ip = "127.0.0.1";

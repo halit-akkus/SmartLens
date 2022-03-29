@@ -42,10 +42,12 @@ namespace SmartLens.Listener.Concrate
             try
             {
                 _frontlistener = new UdpClient(_port);
+
                 var receiveResult = await _frontlistener.ReceiveAsync();
 
                 _frontlistener.Close();
-                var result = new Result
+
+                Result result = new Result
                 {
                     ReceiveData = receiveResult.Buffer,
                     IPEndPoint = receiveResult.RemoteEndPoint
@@ -61,6 +63,7 @@ namespace SmartLens.Listener.Concrate
             try
             {
                 _serviceListener = new UdpClient(port);
+
                 var receiveResult = await _serviceListener.ReceiveAsync();
 
                 _serviceListener.Close();

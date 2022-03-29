@@ -12,6 +12,5 @@ namespace SmartLens.Business.Abstract
         void Add(Device device);
         void Update(Device device);
         void Delete(Device DeviceId);
-
     }
 }

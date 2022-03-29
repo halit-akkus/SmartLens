@@ -9,6 +9,7 @@ using SmartLens.WinFormUI;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartLens.Transmission
@@ -25,14 +26,16 @@ namespace SmartLens.Transmission
        
         static void Main(string[] args)
         {
-            var serviceProvider = ContainerConfiguration.Configure();
+            IContainer serviceProvider = ContainerConfiguration.Configure();
 
             _client = serviceProvider.Resolve<IResponseClient>();
             _server = serviceProvider.Resolve<IServer>();
             _settings = serviceProvider.Resolve<ISettings>();
 
-            var getJson = _settings.GetJson();
+            Task<string> getJson = _settings.GetJson();
+
             Console.WriteLine($"Settings: {getJson.Result}");
+
              _settings = JsonConvert.DeserializeObject<Settings>(getJson.Result);
 
             int port = args.Length > 0 ? int.Parse(args[0]) : _settings.FrontServerPort;
@@ -47,14 +50,14 @@ namespace SmartLens.Transmission
 
             IListener listener = new ServerFactory(port).CreateListener(protocol);
 
-            var startListener = new Thread(delegate ()
+            Thread startListener = new Thread(delegate ()
             {
                 _server.ServerStarted(listener);
             });
 
             startListener.Start();
-             
-            var startClient = new Thread(delegate ()
+
+            Thread startClient = new Thread(delegate ()
              {
                  _client.ServerStarted(listener,_settings.ServiceServerPort);
              });
